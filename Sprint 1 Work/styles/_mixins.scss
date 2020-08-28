@@ -1,0 +1,24 @@
+@mixin photo-mobile {
+    width: 90%;
+        margin: auto;
+        height: 8.99rem;
+        object-fit: cover;
+}
+
+@mixin header-mobile {
+    padding: .3rem 1rem 0;
+    font-family: "Avenir-Next-Bold";
+    font-size: 1.5rem;
+}
+
+@mixin display-mobile {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin footertext-mobile {
+    font-size: 0.83rem;
+    color: $second-color;
+    line-height: 1.25rem;
+    padding-left: 1rem;
+}
