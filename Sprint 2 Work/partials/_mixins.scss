@@ -1,4 +1,4 @@
-@import "variables";
+@import "../partials/variables";
 
 @mixin tablet {
     @media (min-width: $tablet-breakpoint) {
@@ -28,8 +28,9 @@
 
 @mixin header-mobile {
     padding: .3rem 1rem 0;
-    font-family: "Avenir-Next-Bold";
+    font-family: "Avenir";
     font-size: 1.5rem;
+    
 }
 
 @mixin display-mobile {
