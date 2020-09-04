@@ -1,12 +1,12 @@
-@import "fonts";
-@import "variables";
-@import "mixins";
+@import "../partials/fonts";
+@import "../partials/variables";
+@import "../partials/mixins";
 
 html, body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Avenir-Next"
+    font-family: "Avenir"
 }
 
 
@@ -76,7 +76,7 @@ html, body {
      font-size: 1.45rem;
      font-weight: 700;
      width: 70%;
-     font-family: "Avenir-Next-Bold"
+     font-family: "Avenir-Bold"
              
     }
 }  
@@ -98,17 +98,17 @@ html, body {
         padding: 1.5rem 0 0;
         font-size: 1rem;
         line-height: 1.35rem;
-        font-family: "Avenir-Next-Bold";
+        font-family: "Avenir-Bold";
     }
 
     &__signature {
-        font-family: "Avenir-Next-Bold";
+        font-family: "Avenir-Bold";
         font-size: .8rem;
         padding: .6rem 1rem 0;
     }
 
     &__paragraph-title {
-        font-family: "Avenir-Next-Bold";
+        font-family: "Avenir-Bold";
         font-size: 1rem;
         padding: 0 1.2rem;
     }
@@ -130,7 +130,7 @@ html, body {
 .photo {
     @include display-mobile;
     background-color: $second-color;
-    padding-bottom: 2rem;
+    padding-bottom: 2.5rem;
 
     &__header {
         @include header-mobile;
@@ -160,7 +160,7 @@ html, body {
         font-size: 2rem;
         margin: auto 0;
         padding-top: 3rem;
-        font-family: "Avenir-Next-Demi";
+        font-family: "Avenir-Demi";
         font-weight: bold;
     }
 
@@ -466,11 +466,57 @@ html, body {
         }
         
     }
+
+}
+
+}
+
+.comments {
+    @include display-mobile;
+
+    &__header {
+        @include header-mobile;
+    }
+
+    &__container {
+        display:flex;
+    }
+
+    &__image {
+        height: 3rem;
+        width: 3rem;
+        padding: 1rem;
+        border-radius: 3rem;
+    }
+
+    &__label-name {
+        font-size: .75rem;
+        line-height: 1.25rem;
+        color: $third-color;
+        font-weight: bold;
+        margin: 0 auto;
+    }
+
+    &__label-comment {
+        font-size: .75rem;
+        line-height: 1.25rem;
+        color: $third-color;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    input[type="text"] {
+        width: 13.5rem;
+        height: 2.5rem;
+        background-color: $second-color;
+        border-radius: .25rem;
+    }
+
 }
 
 
 
-}
+
 
 
 
