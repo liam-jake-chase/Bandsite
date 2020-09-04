@@ -505,11 +505,38 @@ html, body {
         margin-bottom: 0;
     }
 
-    input[type="text"] {
+    &__label-style-name {
         width: 13.5rem;
         height: 2.5rem;
         background-color: $second-color;
         border-radius: .25rem;
+    }
+
+    &__label-style-comments {
+        width: 13.5rem;
+        height: 6rem;
+        background-color: $second-color;
+        border-radius: .25rem;
+        
+    }
+
+    &__button {
+       margin-top: 1rem;
+       padding: .89rem 4.7rem;
+       border-radius: .25rem;
+       background-color: $main-color;
+       color: $second-color;
+       font-weight: 100;
+       font-family: "Avenir-Demi";
+       border-style: solid;
+       border: .3rem;
+       margin-bottom: 2rem;
+       
+    }
+
+    &__posted-list {
+        width: 32rem;
+        margin: 0 auto;
     }
 
 }

@@ -555,17 +555,35 @@ html, body {
   margin-bottom: 0;
 }
 
-.comments input[type="text"] {
+.comments__label-style-name {
   width: 13.5rem;
   height: 2.5rem;
   background-color: #FAFAFA;
   border-radius: .25rem;
 }
 
-.comments__label-class {
+.comments__label-style-comments {
   width: 13.5rem;
-  height: 10rem;
+  height: 6rem;
   background-color: #FAFAFA;
   border-radius: .25rem;
+}
+
+.comments__button {
+  margin-top: 1rem;
+  padding: .89rem 4.7rem;
+  border-radius: .25rem;
+  background-color: #323232;
+  color: #FAFAFA;
+  font-weight: 100;
+  font-family: "Avenir-Demi";
+  border-style: solid;
+  border: .3rem;
+  margin-bottom: 2rem;
+}
+
+.comments__posted-list {
+  width: 32rem;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=main.css.map */
