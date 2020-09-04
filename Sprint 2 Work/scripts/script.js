@@ -27,17 +27,34 @@ let postedList = [
         for (let i = 0; i < listArray.length; i++) {
             let commentsSection = document.createElement("div");
             commentsContainer.appendChild(commentsSection);
-            commentsSection.className += "comments__section";
+            commentsSection.className = "comments__section";
+
+            let circleSection = document.createElement("div");
+            commentsContainer.appendChild(circleSection);
+            circleSection.className ="comments__circle-section";
+                      
+            let name = document.createElement("h4")
+            commentsContainer.appendChild(name);
+            name.innerHTML = listArray[i]["name"];
+            name.className = "comments__name";
+
+            let dateSection = document.createElement("div");
+            commentsContainer.appendChild(dateSection);
+            dateSection.className ="comments__date-wrapper";
+                      
+            let date = document.createElement("p");            
+            commentsContainer.appendChild(date);
+            date.innerHTML = listArray[i]["date"];
+            date.className = "comment__date";
 
             let textSection = document.createElement("div");
-            textSection.className +="comment__text-default";
             commentsContainer.appendChild(textSection);
-
+            textSection.className ="comments__text-wrapper";
+                      
             let comments = document.createElement("p");            
-            comments.innerText = listArray[i]["comment"];
             textSection.appendChild(comments);
-            comments.className += "comment__text-comment";
-
+            comments.innerHTML = listArray[i]["comment"];
+            comments.className = "comment__text-comment";
         }
 
     }
