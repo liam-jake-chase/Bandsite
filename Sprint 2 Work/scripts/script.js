@@ -17,12 +17,12 @@ let postedList = [
         date: "11/15/2018",
         comment: "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!"
     }];
+
+    // Original comments to show
+
+    function displayComment(listArray) {
     
-
-    // Inserting starting comments + creating function for inserting new array information
-
-    function showComments(listArray) {
-    let commentsContainer = document.querySelector(".comments__posted-list");
+        let commentsContainer = document.querySelector(".comments__posted-list");
 
         for (let i = 0; i < listArray.length; i++) {
             let commentsSection = document.createElement("div");
@@ -35,11 +35,11 @@ let postedList = [
 
             let nameSection = document.createElement("div");
             commentsContainer.appendChild(nameSection);
-            nameSection.className ="comments__name-section";
+            nameSection.className = "comments__name-section";
 
             let circle = document.createElement("div");
             commentsContainer.appendChild(circle);
-            circle.className ="comments__circle";
+            circle.className = "comments__circle";
 
             let name = document.createElement("h4")
             commentsContainer.appendChild(name);
@@ -49,20 +49,110 @@ let postedList = [
             let date = document.createElement("p");            
             commentsContainer.appendChild(date);
             date.innerHTML = listArray[i]["date"];
-            date.className = "comment__date";
+            date.className = "comments__date";
 
             let textSection = document.createElement("div");
             commentsContainer.appendChild(textSection);
-            textSection.className ="comments__text-wrapper";
+            textSection.className = "comments__text-wrapper";
                       
             let comments = document.createElement("p");            
             textSection.appendChild(comments);
             comments.innerHTML = listArray[i]["comment"];
-            comments.className = "comment__text-comment";
+            comments.className = " comments__text-comment";
         }
-
     }
 
-showComments(postedList);
+displayComment(postedList);
 
+// Inserting a new comment function
+
+     // // Button listener
+
+     const form = document.querySelector(".comments__form");
+     
+     form.addEventListener("submit", function insertComment(event) {
+         event.preventDefault();
+         
+         let commentsContainer = document.querySelector(".comments__posted-list");
+
+            const newComment = [];
+            newComment.name = event.target.name.value;
+            newComment.comment = event.target.comment.value;
+              
+            let commentsSection = document.createElement("div");
+            commentsContainer.appendChild(commentsSection);
+            commentsSection.className = "comments__section";
+
+            let circleSection = document.createElement("div");
+            commentsContainer.appendChild(circleSection);
+            circleSection.className ="comments__circle-section";
+
+            let nameSection = document.createElement("div");
+            commentsContainer.appendChild(nameSection);
+            nameSection.className = "comments__name-section";
+
+            let circle = document.createElement("div");
+            commentsContainer.appendChild(circle);
+            circle.className = "comments__circle";
+
+            let name = document.createElement("h4")
+            commentsContainer.appendChild(name);
+            name.innerHTML = newComment.name;
+            name.className = "comments__name";  
+            
+            // Pulling todays date 
+            function formatDate() {
+            let d = new Date(), 
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+    
+            if (month.length < 2) 
+            month = '0' + month;
+            if (day.length < 2) 
+            day = '0' + day;
+    
+            return [month, day, year].join('/');    }
+
+            const dateToday = formatDate(new Date());
+                      
+            let newDate = document.createElement("p");            
+            commentsContainer.appendChild(newDate);
+            newDate.innerHTML = dateToday;
+            newDate.className = "comments__date";
+
+            let textSection = document.createElement("div");
+            commentsContainer.appendChild(textSection);
+            textSection.className = "comments__text-wrapper";
+                      
+            let comments = document.createElement("p");            
+            textSection.appendChild(comments);
+            comments.innerHTML = newComment.comment;
+            comments.className = "comments__text-comment";
+
+            //Add new comment to front of array
+            postedList.unshift(newComment[0]);
+
+            document.querySelector(".comments__form").reset();
+            
+        });
+    
+            
+ 
+   
+
+   
+   
+    
+    
+
+     
+
+    
+
+    
+
+       
+
+       
     
