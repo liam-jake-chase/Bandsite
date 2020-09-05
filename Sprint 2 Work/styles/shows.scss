@@ -1,0 +1,96 @@
+@import "../partials/fonts";
+@import "../partials/variables";
+@import "../partials/mixins";
+
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Avenir"
+}
+
+
+
+
+.navbar {
+    height: 5rem;
+    background-color:$main-color;
+    color: $second-color;
+    display: flex;
+    flex-wrap:wrap;
+      
+    &__link {
+     text-decoration: none;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     width: 50%;
+     font-size: .9rem;
+     padding-bottom:.5rem;
+     border-bottom: solid 0.25rem transparent;
+     color: $third-color;
+    } 
+      
+    &__link-view {
+        border-bottom: solid 0.25rem white; 
+        color: $second-color;  
+    }
+    
+    
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 1rem auto;
+        height: 1.20rem;
+        
+
+    }
+}
+
+.hero {
+    display: flex;    
+    flex-direction: column;
+    background-image: url("../assets/Images/IMG_139887.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 1rem;
+    padding-bottom: .8rem;
+    height: 29.5rem;
+    position: relative;
+
+    &__opacity {
+        background-color: $third-color;
+        opacity: .2;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left:0;
+    }
+
+    &__album {
+        color: $text-color;
+        margin-top: 4rem;
+    }
+    
+    &__title {
+     color: $text-color;
+     align-items: center;
+     line-height: 3.23rem;
+     font-size: 2.32rem;
+     font-weight: 700;
+     width: 100%;
+     font-family: "Avenir-Bold";
+     margin-top: 0;
+             
+    }
+    &__soundcloud {
+        width:95%;
+        height: 6.1rem;
+        margin-top: .5rem;
+    }
+
+
+}  

@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/Fonts/Avenir-Next.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Avenir-Bold";
+  src: url("../assets/Fonts/Avenir-Next-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Avenir-Demi";
+  src: url("../assets/Fonts/Avenir-Next-Demi.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+
+html, body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Avenir";
+}
+
+.navbar {
+  height: 5rem;
+  background-color: #323232;
+  color: #FAFAFA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.navbar__link {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  font-size: .9rem;
+  padding-bottom: .5rem;
+  border-bottom: solid 0.25rem transparent;
+  color: #AFAFAF;
+}
+
+.navbar__link-view {
+  border-bottom: solid 0.25rem white;
+  color: #FAFAFA;
+}
+
+.navbar__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 1rem auto;
+  height: 1.20rem;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: url("../assets/Images/IMG_139887.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-left: 1rem;
+  padding-bottom: .8rem;
+  height: 29.5rem;
+  position: relative;
+}
+
+.hero__opacity {
+  background-color: #AFAFAF;
+  opacity: .2;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.hero__album {
+  color: #FFFFFF;
+  margin-top: 4rem;
+}
+
+.hero__title {
+  color: #FFFFFF;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 3.23rem;
+  font-size: 2.32rem;
+  font-weight: 700;
+  width: 100%;
+  font-family: "Avenir-Bold";
+  margin-top: 0;
+}
+
+.hero__soundcloud {
+  width: 95%;
+  height: 6.1rem;
+  margin-top: .5rem;
+}
+/*# sourceMappingURL=shows.css.map */
