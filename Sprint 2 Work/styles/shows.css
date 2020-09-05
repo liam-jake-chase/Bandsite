@@ -147,18 +147,34 @@ html, body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-left: 1rem;
+  margin: auto 0;
 }
 
 .shows__date-header {
   color: #AFAFAF;
+  padding-bottom: 1rem;
 }
 
 .shows__date-text {
+  color: black;
   font-weight: bold;
   font-size: 0.813rem;
 }
 
 .shows__venue-header {
   color: #AFAFAF;
+}
+
+.shows__venue-text {
+  font-size: 0.813rem;
+}
+
+.shows__location-header {
+  color: #AFAFAF;
+}
+
+.shows__location-text {
+  font-size: 0.813rem;
 }
 /*# sourceMappingURL=shows.css.map */

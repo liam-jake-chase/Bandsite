@@ -5,37 +5,43 @@ let showsTable = [
     {
         date: "Mon Dec 17 2018",
         venue: "Ronald Lane",
-        location: "San Francisco, CA"
+        location: "San Francisco, CA",
+        button: "BUY TICKETS"
 
     },
     {
         date: "Tue Jul 18 2019",
         venue: "Pier 3 East",
-        location: "San Francisco, CA"
+        location: "San Francisco, CA",
+        button: "BUY TICKETS"
   
     },
     {
         date: "Fri Jul 22 2019",
         venue: "View Loungue",
-        location: "San Francisco, CA"
+        location: "San Francisco, CA",
+        button: "BUY TICKETS"
     
     },
     {
         date: "Sat Aug 12 2019",
         venue: "Hyatt Agency",
-        location: "San Francisco, CA"
+        location: "San Francisco, CA",
+        button: "BUY TICKETS"
     
     },
     {
         date: "Fri Sep 05 2019",
         venue: "Moscow Center",
-        location: "San Francisco, CA"
+        location: "San Francisco, CA",
+        button: "BUY TICKETS"
     
     },
     {
         date: "Wed Aug 11 2019",
         venue: "Pres Club",
-        location: "San Francisco, CA"
+        location: "San Francisco, CA",
+        button: "BUY TICKETS"
     
     } 
 ];
@@ -46,37 +52,44 @@ function displayShows(listArray) {
 
     for (let i = 0; i < listArray.length; i++) {
 
-        let dateHeader = document.querySelector(".shows__date-header"); 
+        let dateContainer = document.createElement("div");
+        showsContainer.appendChild(dateContainer);
+        dateContainer.className = "shows__date";
+
+        let dateHeader = document.createElement("h5");
         dateHeader.innerText = "Date";       
-        showsContainer.appendChild(dateHeader);        
+        dateContainer.appendChild(dateHeader);  
+        dateContainer.className = "shows__date-header";      
         
-        let dateText = document.querySelector(".shows__date-text");            
-        showsContainer.appendChild(dateText);
+        let dateText = document.createElement("p");            
+        dateContainer.appendChild(dateText);
         dateText.innerHTML = listArray[i]["date"];
+        dateText.className = "shows__date-text";
 
-        let venueHeader = document.querySelector(".shows__venue-header"); 
-        venueHeader.innerText = "Venue";       
-        showsContainer.appendChild(venueHeader);        
-        
-        let venueText = document.querySelector(".shows__venue-text");            
-        showsContainer.appendChild(venueText);
-        venueText.innerHTML = listArray[i]["venue"];
+        let venueContainer = document.createElement("div");
+        showsContainer.appendChild(venueContainer);
+        venueContainer.className = "shows__venue";
 
-        let locationHeader = document.querySelector(".shows__location-header");
-        locationHeader.innerText = "Location";
-        showsContainer.appendChild(locationHeader);
+        let venueHeader = document.createElement("h5");
+        venueHeader.innerText = "Venue";
+        venueContainer.appendChild(venueHeader);
+        venueHeader.className = "shows__venue-header";
+
         
-        let locationText = document.querySelector(".shows__location-text");
-        showsContainer.appendChild(locationText);
-        locationText.innerHTML = listArray[i]["location"];
-  
+
+        // let buttonContainer = document.createElement("div");
+        // showsContainer.appendChild(buttonContainer)
+        // buttonContainer.className = "shows__button";
+
+        // let ticketButton = document.createElement("button");
+        // ticketButton.innerHTML = listArray[i]["button"];
+        // buttonContainer.appendChild(ticketButton);
+        
+        
+        
     }
 
-    let buttonDiv = document.querySelector(".shows__button");
-    let ticketButton = document.createElement("button");
-    let buttonText = document.createTextNode("BUY TICKETS");
-    ticketButton.appendChild(buttonText);
-    buttonDiv.appendChild(ticketButton);
+    
 }
 
 displayShows(showsTable);

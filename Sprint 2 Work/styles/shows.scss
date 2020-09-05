@@ -103,20 +103,38 @@ html, body {
     &__main-container {
         display: flex;
         flex-direction: column;
+        padding-left: 1rem;
+        margin: auto 0;
     }
 
     &__date-header {
         color: $third-color;
+        padding-bottom: 1rem;
     }
 
     &__date-text {
+        color: black;
         font-weight: bold;
         font-size: 0.813rem;
-               
     }
 
     &__venue-header {
         color: $third-color;
     }
+
+    &__venue-text {
+        font-size: 0.813rem;
+               
+    }
+
+    &__location-header {
+        color: $third-color;
+    }
+
+    &__location-text {
+        font-size: 0.813rem;
+               
+    }
+    
     
 }
