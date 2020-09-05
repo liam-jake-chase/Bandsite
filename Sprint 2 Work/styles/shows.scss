@@ -93,4 +93,30 @@ html, body {
     }
 
 
-}  
+}  .shows {
+    @include display-mobile;
+
+    &__header {
+        @include header-mobile;
+    }
+
+    &__main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__date-header {
+        color: $third-color;
+    }
+
+    &__date-text {
+        font-weight: bold;
+        font-size: 0.813rem;
+               
+    }
+
+    &__venue-header {
+        color: $third-color;
+    }
+    
+}

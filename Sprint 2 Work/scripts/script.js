@@ -130,9 +130,6 @@ displayComment(postedList);
             comments.innerHTML = newComment.comment;
             comments.className = "comments__text-comment";
 
-            //Add new comment to front of array
-            postedList.unshift(newComment[0]);
-
             document.querySelector(".comments__form").reset();
             
         });

@@ -122,4 +122,43 @@ html, body {
   height: 6.1rem;
   margin-top: .5rem;
 }
+
+.shows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.shows__header {
+  padding: .3rem 1rem 0;
+  font-family: "Avenir-Bold";
+  font-size: 1.5rem;
+}
+
+.shows__main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.shows__date-header {
+  color: #AFAFAF;
+}
+
+.shows__date-text {
+  font-weight: bold;
+  font-size: 0.813rem;
+}
+
+.shows__venue-header {
+  color: #AFAFAF;
+}
 /*# sourceMappingURL=shows.css.map */
