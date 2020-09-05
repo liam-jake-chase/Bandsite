@@ -102,9 +102,10 @@ html, body {
     }
 
     &__signature {
-        font-family: "Avenir-Bold";
+        font-family: "Avenir";
         font-size: .8rem;
         padding: .6rem 1rem 0;
+        
     }
 
     &__paragraph-title {
@@ -166,9 +167,21 @@ html, body {
 
     &__icons-container {
         display: flex;
-        padding: 1.44rem .31rem;
+        padding: 1.44rem .5rem;
         justify-content: space-around;
-        width: 46%;
+        width: 40%;
+    }
+
+    &__icons {
+        height: 1.5rem;
+        width: 1.5rem;        
+        
+        
+    }
+
+    .navbar__logo {
+        display: none;
+        
     }
 
     &__contact-name {
@@ -188,6 +201,7 @@ html, body {
 
     &__contact-copyright {
         padding-top:1rem;
+        padding-bottom: 2rem;
     }
 }
 
@@ -534,19 +548,13 @@ html, body {
        
     }
 
-    &__section {
-        display: flex;
-    }
-
-    &__text-wrapper {
-        width: 20rem;
-    }
-
-    &__circle-section {
+    &__circle {
         background-color: $third-color;
         border-radius: 50%;
         width: 3rem;
         height: 3rem;
+        flex-direction: row;
+        
     }
 
    

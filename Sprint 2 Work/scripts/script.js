@@ -32,15 +32,19 @@ let postedList = [
             let circleSection = document.createElement("div");
             commentsContainer.appendChild(circleSection);
             circleSection.className ="comments__circle-section";
-                      
+
+            let nameSection = document.createElement("div");
+            commentsContainer.appendChild(nameSection);
+            nameSection.className ="comments__name-section";
+
+            let circle = document.createElement("div");
+            commentsContainer.appendChild(circle);
+            circle.className ="comments__circle";
+
             let name = document.createElement("h4")
             commentsContainer.appendChild(name);
             name.innerHTML = listArray[i]["name"];
-            name.className = "comments__name";
-
-            let dateSection = document.createElement("div");
-            commentsContainer.appendChild(dateSection);
-            dateSection.className ="comments__date-wrapper";
+            name.className = "comments__name";            
                       
             let date = document.createElement("p");            
             commentsContainer.appendChild(date);
