@@ -38,6 +38,17 @@ html, body {
       flex-wrap: wrap;
 }
 
+@media (min-width: 768px) {
+  .navbar {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 0 1.5rem;
+  }
+}
+
 .navbar__link {
   text-decoration: none;
   display: -webkit-box;
@@ -55,6 +66,14 @@ html, body {
   color: #AFAFAF;
 }
 
+@media (min-width: 768px) {
+  .navbar__link {
+    width: 12%;
+    margin: 0 1.5rem;
+    padding-top: 1.5rem;
+  }
+}
+
 .navbar__link-view {
   border-bottom: solid 0.25rem white;
   color: #FAFAFA;
@@ -70,6 +89,15 @@ html, body {
   width: 100%;
   margin: 1rem auto;
   height: 1.20rem;
+}
+
+@media (min-width: 768px) {
+  .navbar__logo {
+    width: auto;
+    margin: 0;
+    padding-top: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 .hero {
@@ -90,6 +118,12 @@ html, body {
   position: relative;
 }
 
+@media (min-width: 768px) {
+  .hero {
+    height: 41.875rem;
+  }
+}
+
 .hero__opacity {
   background-color: #AFAFAF;
   opacity: .2;
@@ -101,7 +135,9 @@ html, body {
 
 .hero__album {
   color: #FFFFFF;
-  margin-top: 4rem;
+  margin-top: 6rem;
+  font-size: 1.5rem;
+  font-weight: 900;
 }
 
 .hero__title {
@@ -117,10 +153,24 @@ html, body {
   margin-top: 0;
 }
 
+@media (min-width: 768px) {
+  .hero__title {
+    line-height: 5.25rem;
+    font-size: 3.75rem;
+    width: 80%;
+  }
+}
+
 .hero__soundcloud {
   width: 95%;
   height: 6.1rem;
   margin-top: .5rem;
+}
+
+@media (min-width: 768px) {
+  .hero__soundcloud {
+    width: 57%;
+  }
 }
 
 .shows {
