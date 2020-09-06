@@ -98,6 +98,10 @@ const showsTable = [
         ticketButton.innerHTML = listArray[i]["button"];
         showsContainer.appendChild(ticketButton);
         ticketButton.className = "shows__button";
+
+        let breakLine = document.createElement("div");
+        showsContainer.appendChild(breakLine);
+        breakLine.className = "shows__breakline";
         
         
         

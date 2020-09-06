@@ -142,16 +142,13 @@ html, body {
 
 .shows__main-container {
   padding-left: 1rem;
-}
-
-.shows__date {
-  margin-bottom: 0;
-  height: 1rem;
+  padding-bottom: 1rem;
 }
 
 .shows__date-header {
   color: #AFAFAF;
   margin-bottom: 0;
+  height: 3rem;
 }
 
 .shows__date-text {
@@ -162,24 +159,28 @@ html, body {
   height: .5rem;
 }
 
-.shows__venue {
-  margin-top: 0;
-}
-
 .shows__venue-header {
   color: #AFAFAF;
+  margin: 1.5rem 0;
+  height: .5rem;
 }
 
 .shows__venue-text {
   font-size: 0.813rem;
+  margin: 0;
+  height: .5rem;
 }
 
 .shows__location-header {
   color: #AFAFAF;
+  margin: 1.5rem 0;
+  height: .5rem;
 }
 
 .shows__location-text {
   font-size: 0.813rem;
+  padding-bottom: 1rem;
+  height: .5rem;
 }
 
 .shows__button {
@@ -189,6 +190,18 @@ html, body {
   font-weight: 900;
   color: #FAFAFA;
   background-color: #323232;
+  border-radius: .25rem;
+  border-style: solid;
+  border: .3rem;
+}
+
+.shows__breakline {
+  width: 17.75rem;
+  height: .15rem;
+  margin-top: .8rem;
+  margin-bottom: 1.3rem;
+  background-color: #E1E1E1;
+  border-radius: .5rem;
 }
 
 .footer {
