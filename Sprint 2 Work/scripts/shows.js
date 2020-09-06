@@ -116,7 +116,7 @@ displayShows(showsTable);
 
         const headerContainer = document.createElement("div");
         showsContainerLarge.appendChild(headerContainer);
-        headerContainer.className = "shows__header-container";
+        headerContainer.className = "shows__header-container";        
 
         const dateHeader = document.createElement("h5");
         dateHeader.innerText = "DATES";       
@@ -131,56 +131,36 @@ displayShows(showsTable);
         const locationHeader = document.createElement("h5");
         locationHeader.innerText = "LOCATION";
         headerContainer.appendChild(locationHeader);
-        locationHeader.className = "shows__location-header-large";
-
-        const infoContainer = document.createElement("div");
-        showsContainerLarge.appendChild(infoContainer);
-        infoContainer.className = "shows__info-container";
-
-        const dateContainer = document.createElement("div");
-        infoContainer.appendChild(dateContainer);
-        dateContainer.className = "shows__date-container";
-
-        const venueContainer = document.createElement("div");
-        infoContainer.appendChild(venueContainer);
-        venueContainer.className = "shows__venue-container";
-
-        const locationContainer = document.createElement("div");
-        infoContainer.appendChild(locationContainer);
-        locationContainer.className = "shows__location-container";
-
-        const buttonContainer = document.createElement("div");
-        infoContainer.appendChild(buttonContainer);
-        buttonContainer.className = "shows__button-container";
-
-        
+        locationHeader.className = "shows__location-header-large";        
 
         function displayShowsLarge(listArray) {
         for (let i = 0; i < showsTable.length; i++) {
 
+            const infoContainer = document.createElement("div");
+            showsContainerLarge.appendChild(infoContainer);
+            infoContainer.className = "shows__info-container";
+
             const dateText = document.createElement("p");            
-            dateContainer.appendChild(dateText);
+            infoContainer.appendChild(dateText);
             dateText.innerText = showsTable[i]["date"];
             dateText.className = "shows__date-text";
 
             const venueText = document.createElement("p"); 
             venueText.innerText = showsTable[i]["venue"];           
-            venueContainer.appendChild(venueText);       
+            infoContainer.appendChild(venueText);       
             venueText.className = "shows__venue-text";
 
             const locationText = document.createElement("p");
-            locationContainer.appendChild(locationText);
+            infoContainer.appendChild(locationText);
             locationText.innerText = showsTable[i]["location"];
             locationText.className = "shows__location-text";
 
             let ticketButton = document.createElement("button");
             ticketButton.innerHTML = listArray[i]["button"];
-            buttonContainer.appendChild(ticketButton);
+            infoContainer.appendChild(ticketButton);
             ticketButton.className = "shows__button";
 
-            // let breakLine = document.createElement("div");
-            // showsContainerLarge.appendChild(breakLine);
-            // breakLine.className = "shows__breakline";
+            
         }
 
     }; 

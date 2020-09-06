@@ -128,22 +128,27 @@ html, body {
 
 
 }  .shows {
-    @include display-mobile;
-
-    &__main-container {
-        @include tablet {
-            display: none;
-        }
+    @include tablet {
+        display: flex;
+        flex-direction: column;
     }
 
-    &__header {
+    @include display-mobile;
+
+       &__header {
         @include header-mobile;
         margin-bottom: .3rem;
+        font-size: 2rem;
+        font-weight: bolder;
     }
 
     &__main-container {           
         padding-left: 1rem; 
         padding-bottom: 1rem;
+
+        @include tablet {
+            display: none;
+        }
 
         
                              
@@ -166,7 +171,11 @@ html, body {
 
         @include tablet {
             width: 14.5rem;
-            margin: 0 0 3.5rem 1rem;  
+            margin: auto 0;
+            padding-left: 1rem;
+            font-family: "Avenir";
+            font-size: 1rem;
+            font-weight: 900;
              
         }
         
@@ -188,7 +197,7 @@ html, body {
 
         @include tablet {
            width: 9rem;  
-           margin: 0 0 3.5rem 0;
+           margin: auto 0;
            
         }
                
@@ -207,7 +216,9 @@ html, body {
 
         @include tablet {
             width: 12.5rem;
-            margin: 1rem 0 3.5rem 0;
+            margin: 2.3rem 0;
+            
+            
             
         }
                
@@ -225,21 +236,21 @@ html, body {
         border: .3rem;
 
         @include tablet {
-            width: 10rem;
-            margin: 0 0 2rem 0;
-        }
+            width: 10.5rem;
+            margin: 1rem 1rem 1rem 0;
+        }    
         
     }
 
     &__breakline {
         width: 17.75rem;
         height: .15rem;
-        // border: solid 1px #E1E1E1;; 
         margin-top: .8rem;
         margin-bottom: 1.3rem;
         background-color: #E1E1E1;
         border-radius: .5rem;
-        
+
+              
         
     }
     
@@ -247,7 +258,8 @@ html, body {
         display: none;
 
         @include tablet {            
-            display: initial;
+            display: flex;
+            flex-direction: column;
         }        
        
     }
@@ -257,7 +269,13 @@ html, body {
     }
 
     &__info-container {
-        display: inline-flex;
+        display: flex;
+        flex-direction: row;
+        border-bottom: solid 2px #E1E1E1;        
+        border-radius: .5rem;
+        vertical-align: middle;
+        height: 5rem;
+
         
     }
 
