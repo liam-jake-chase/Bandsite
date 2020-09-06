@@ -116,7 +116,11 @@ displayShows(showsTable);
 
         const headerContainer = document.createElement("div");
         showsContainerLarge.appendChild(headerContainer);
-        headerContainer.className = "shows__header-container";        
+        headerContainer.className = "shows__header-container"; 
+        
+        const sectionContainer = document.createElement("div");
+        showsContainerLarge.appendChild(sectionContainer);
+        sectionContainer.className = "shows__section-container"; 
 
         const dateHeader = document.createElement("h5");
         dateHeader.innerText = "DATES";       
@@ -137,7 +141,7 @@ displayShows(showsTable);
         for (let i = 0; i < showsTable.length; i++) {
 
             const infoContainer = document.createElement("div");
-            showsContainerLarge.appendChild(infoContainer);
+            sectionContainer.appendChild(infoContainer);
             infoContainer.className = "shows__info-container";
 
             const dateText = document.createElement("p");            

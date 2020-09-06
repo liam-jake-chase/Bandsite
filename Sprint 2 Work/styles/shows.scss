@@ -166,19 +166,38 @@ html, body {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        width: 40.25rem;
-        margin-left: 9rem;
+        margin-left: 1rem;
+
+        &__section-container {
+            width: 50.25rem;
+            padding-right: 5rem;
+        }
         
     }
 
     @include display-mobile;
 
-       &__header {
+
+        &__header {
         @include header-mobile;
         margin-bottom: .3rem;
         font-size: 2rem;
         font-weight: bolder;
+        
+        @include desktop {
+            padding-left: 7rem;
+        }
+
+
     }
+
+
+    
+
+
+    
+
+    
 
     &__main-container {           
         padding-left: 1rem; 
@@ -198,6 +217,7 @@ html, body {
         margin-bottom: 0;
         height: 3rem;
     }    
+    
         
 
     &__date-text {
@@ -215,6 +235,11 @@ html, body {
             font-size: 1rem;
             font-weight: 900;
              
+        }
+
+        @include desktop {
+            margin-left: 0;
+            padding-left: 0;
         }
         
 
@@ -278,7 +303,11 @@ html, body {
         @include tablet {
             width: 10.5rem;
             margin: 1rem 1rem 1rem 0;
-        }    
+        }   
+        
+        @include desktop {
+            margin-right: 0;
+        }
         
     }
 
@@ -320,25 +349,36 @@ html, body {
         vertical-align: middle;
         height: 5rem;
 
+        @include desktop {
+            width: 90%;
+            border-radius: 0px;
+        }
+
         
     }
 
-    &__button-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-      
+   
 
     &__date-header-large {
         color: $third-color;
         margin-left: 1rem; 
-        width: 14.5rem;       
+        width: 14.5rem;     
+
+        @include desktop {
+            margin-left: 0;
+            width: 14rem;
+        }
+    
     }
 
+    
     &__venue-header-large {
         color: $third-color;  
         width: 9rem;
+
+        @include desktop {
+            width: 8.8rem;
+        }
             
     }
 
