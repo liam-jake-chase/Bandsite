@@ -183,6 +183,12 @@ html, body {
           flex-direction: column;
 }
 
+@media (min-width: 768px) {
+  .shows__main-container {
+    display: none;
+  }
+}
+
 .shows__header {
   padding: .3rem 1rem 0;
   font-family: "Avenir-Bold";
@@ -252,6 +258,47 @@ html, body {
   margin-bottom: 1.3rem;
   background-color: #E1E1E1;
   border-radius: .5rem;
+}
+
+.shows__main-container-large {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .shows__main-container-large {
+    display: initial;
+  }
+}
+
+.shows__header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.shows__info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.shows__date-header-large {
+  color: #AFAFAF;
+  margin-left: 1rem;
+  width: 14.5rem;
+}
+
+.shows__venue-header-large {
+  color: #AFAFAF;
+  width: 9rem;
+}
+
+.shows__location-header-large {
+  color: #AFAFAF;
 }
 
 .footer {

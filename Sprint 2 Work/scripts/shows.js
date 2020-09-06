@@ -111,3 +111,60 @@ const showsTable = [
 }
 
 displayShows(showsTable);
+
+        const showsContainerLarge = document.querySelector(".shows__main-container-large");
+
+        const headerContainer = document.createElement("div");
+        showsContainerLarge.appendChild(headerContainer);
+        headerContainer.className = "shows__header-container";
+
+        const infoContainer = document.createElement("div");
+        showsContainerLarge.appendChild(infoContainer);
+        infoContainer.className = "shows__info-container";
+
+        const dateHeader = document.createElement("h5");
+        dateHeader.innerText = "DATES";       
+        headerContainer.appendChild(dateHeader);  
+        dateHeader.className = "shows__date-header-large";  
+
+        const venueHeader = document.createElement("h5");
+        venueHeader.innerText = "VENUE";
+        headerContainer.appendChild(venueHeader);
+        venueHeader.className = "shows__venue-header-large";
+
+        const locationHeader = document.createElement("h5");
+        locationHeader.innerText = "LOCATION";
+        headerContainer.appendChild(locationHeader);
+        locationHeader.className = "shows__location-header-large";
+
+        function displayShowsLarge(listArray) {
+        for (let i = 0; i < showsTable.length; i++) {
+
+            const dateText = document.createElement("p");            
+            infoContainer.appendChild(dateText);
+            dateText.innerText = showsTable[i]["date"];
+            dateText.className = "shows__date-text";
+
+            // const venueText = document.createElement("p"); 
+            // venueText.innerText = showsTable[i]["venue"];           
+            // showsContainerLarge.appendChild(venueText);       
+            // venueText.className = "shows__venue-text-large";
+
+            // const locationText = document.createElement("p");
+            // showsContainerLarge.appendChild(locationText);
+            // locationText.innerText = showsTable[i]["location"];
+            // locationText.className = "shows__location-text-large";
+
+            // let ticketButton = document.createElement("button");
+            // ticketButton.innerHTML = listArray[i]["button"];
+            // showsContainerLarge.appendChild(ticketButton);
+            // ticketButton.className = "shows__button-large";
+
+            // let breakLine = document.createElement("div");
+            // showsContainerLarge.appendChild(breakLine);
+            // breakLine.className = "shows__breakline-large";
+        }
+
+    }; 
+
+displayShowsLarge(showsTable);

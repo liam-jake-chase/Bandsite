@@ -130,7 +130,11 @@ html, body {
 }  .shows {
     @include display-mobile;
 
-    
+    &__main-container {
+        @include tablet {
+            display: none;
+        }
+    }
 
     &__header {
         @include header-mobile;
@@ -159,6 +163,7 @@ html, body {
         font-size: 0.813rem;
         margin-top: 0;
         height: .5rem;
+        
 
     }
     
@@ -215,8 +220,49 @@ html, body {
         
     }
     
+    &__main-container-large {
+        display: none;
+
+        @include tablet {            
+            display: initial;
+        }        
+       
+    }
+
+    &__header-container {
+        display: flex;
+    }
+
+    &__info-container {
+        display: flex;
+        flex-direction: column;
+    }
+
     
+
+    
+
+    &__date-header-large {
+        color: $third-color;
+        margin-left: 1rem; 
+        width: 14.5rem;       
+    }
+
+    &__venue-header-large {
+        color: $third-color;  
+        width: 9rem;
+            
+    }
+
+    &__location-header-large {
+        color: $third-color; 
+          
+    }
+
+
 }
+    
+
 
 .footer {
     @include display-mobile;
