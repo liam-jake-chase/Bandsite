@@ -83,6 +83,12 @@ html, body {
         height: 41.875rem;
     }
 
+    @include desktop {
+        &__embed {
+            display: flex;
+        }
+    }
+
     &__opacity {
         background-color: $third-color;
         opacity: .2;
@@ -94,9 +100,19 @@ html, body {
 
     &__album {
         color: $text-color;
-        margin-top: 6rem;
-        font-size: 1.5rem;
+        margin-top: 4rem;
+        font-size: 1rem;
         font-weight: 900;
+
+        @include tablet {
+            margin-top: 10rem;
+            font-size: 1.5rem;
+        }
+
+        @include desktop {
+            margin-left: 7rem;
+
+        }
     }
     
     &__title {
@@ -114,6 +130,11 @@ html, body {
         font-size: 3.75rem;
         width: 80%;
      }
+
+     @include desktop {
+         width: 50%;
+         margin-left: 7rem;
+     }
              
     }
     &__soundcloud {
@@ -122,8 +143,15 @@ html, body {
         margin-top: .5rem;
 
         @include tablet {
-            width: 57%;
+            width: 28rem;
         }
+
+        @include desktop {
+            width: 23.25rem;
+            height: 9.125rem;
+        }
+
+
     }
 
 
@@ -131,6 +159,16 @@ html, body {
     @include tablet {
         display: flex;
         flex-direction: column;
+        padding-bottom: 2.5rem;
+    }
+
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 40.25rem;
+        margin-left: 9rem;
+        
     }
 
     @include display-mobile;
@@ -207,6 +245,8 @@ html, body {
         color: $third-color;
         margin: 1.5rem 0; 
         height: .5rem; 
+
+        
     }
 
     &__location-text {
@@ -266,6 +306,10 @@ html, body {
 
     &__header-container {
         display: flex;
+
+        @include tablet {
+            height: 2.5rem;
+        }
     }
 
     &__info-container {
@@ -333,13 +377,29 @@ html, body {
 
     &__icons {
         height: 1.5rem;
-        width: 1.5rem;        
+        width: 1.5rem;   
+        
+        @include tablet {
+            padding-left: 2rem;
+            
+        }
         
         
     }
 
+    @include tablet {
+        &__container {
+            width: 100%;
+        }
+    }
+
     .navbar__logo {
         display: none;
+
+        @include tablet {
+            display: initial;
+            margin-right: 0;
+        }
         
     }
 
@@ -363,3 +423,84 @@ html, body {
         padding-bottom: 2rem;
     }
 }
+
+@include tablet {
+
+    .footer {
+
+        &__header {
+            margin-top: 0;
+        }
+
+        &__container {
+            display: flex;
+        }
+    
+        &__icons {
+            height: 2rem;
+            width: 2rem;
+            justify-content: space-evenly;
+            padding-top: 2rem;
+            height: 1rem;
+            width: 1rem;
+        }
+    
+        
+    
+        &__container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+    
+        &__navbar__logo {
+            flex-direction: flex-end;
+        }
+        
+    
+        &__container-deets {
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 0;
+            padding: 0 2rem;
+            
+    
+        }
+    
+        &__contact-copyright {
+            flex-wrap: wrap;
+            padding: 5rem;
+            margin: 0 auto;
+    
+            
+        
+        }
+    
+        .photo__container {
+            padding-left: 5rem;  
+            margin: auto;
+            
+            &__header {
+                padding-left: 2rem;
+           
+        }
+    }
+}}
+
+@include desktop {
+    .navbar {
+        padding: 0 9rem;
+        &__anchor {
+          margin-left: 2.8rem;
+          width: 5rem;
+          &:hover {
+            font-size: 1rem;
+            transition: 0.3s;
+            font-family: 'Avenir-Bold';
+            color: #FFFFFF;
+            border-bottom: 0.25rem solid white;
+          }
+        }
+      }
+      
+}    
