@@ -46,6 +46,7 @@ const showsTable = [
     } 
 ];
 
+    // Grabbing all data from the objects for the shows tickets section
     const showsContainer = document.querySelector(".shows__main-container");
 
     function displayShows(listArray) {
@@ -56,13 +57,13 @@ const showsTable = [
         dateContainer.className = "shows__date";
         
         const dateHeader = document.createElement("h5");
-        dateHeader.innerText = "Date";       
+        dateHeader.innerText = "DATE";       
         dateContainer.appendChild(dateHeader);  
         dateContainer.className = "shows__date-header";      
         
         const dateText = document.createElement("p");            
         dateContainer.appendChild(dateText);
-        dateText.innerHTML = showsTable[i]["date"];
+        dateText.innerText = showsTable[i]["date"];
         dateText.className = "shows__date-text";
 
         const venueContainer = document.createElement("div");
@@ -70,7 +71,7 @@ const showsTable = [
         venueContainer.className = "shows__venue";
 
         const venueHeader = document.createElement("h5");
-        venueHeader.innerText = "Venue";
+        venueHeader.innerText = "VENUE";
         venueContainer.appendChild(venueHeader);
         venueHeader.className = "shows__venue-header";
 
@@ -84,7 +85,7 @@ const showsTable = [
         locationContainer.className = "shows__location";
 
         const locationHeader = document.createElement("h5");
-        locationHeader.innerText = "Location";
+        locationHeader.innerText = "LOCATION";
         locationContainer.appendChild(locationHeader);
         locationHeader.className = "shows__location-header";
 
@@ -93,13 +94,10 @@ const showsTable = [
         locationText.innerText = showsTable[i]["location"];
         locationText.className = "shows__location-text";
 
-        let buttonContainer = document.createElement("div");
-        showsContainer.appendChild(buttonContainer)
-        buttonContainer.className = "shows__button";
-
         let ticketButton = document.createElement("button");
         ticketButton.innerHTML = listArray[i]["button"];
-        buttonContainer.appendChild(ticketButton);
+        showsContainer.appendChild(ticketButton);
+        ticketButton.className = "shows__button";
         
         
         

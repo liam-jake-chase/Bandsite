@@ -98,24 +98,35 @@ html, body {
 
     &__header {
         @include header-mobile;
+        margin-bottom: .3rem;
     }
 
-    &__main-container {
-        display: flex;
-        flex-direction: column;
-        padding-left: 1rem;
-        margin: auto 0;
+    &__main-container {           
+        padding-left: 1rem;       
+    }
+
+    &__date {
+        margin-bottom: 0;
+        height: 1rem;
     }
 
     &__date-header {
         color: $third-color;
-        padding-bottom: 1rem;
+        margin-bottom: 0;
+        
     }
 
     &__date-text {
         color: black;
         font-weight: bold;
         font-size: 0.813rem;
+        margin-top: 0;
+        height: .5rem;
+
+    }
+
+    &__venue {
+        margin-top: 0;
     }
 
     &__venue-header {
@@ -135,6 +146,70 @@ html, body {
         font-size: 0.813rem;
                
     }
+
+    &__button {
+        width: 18rem;
+        padding: 1rem 0;
+        font-family: "Avenir-Bold";
+        font-weight: 900;
+        color: $second-color;
+        background-color: $main-color;
+
+    }
     
     
+}
+
+.footer {
+    @include display-mobile;
+    background-color: $main-color;
+
+    &__header {
+        @include header-mobile;
+        color: $text-color;
+        font-size: 2rem;
+        margin: auto 0;
+        padding-top: 3rem;
+        font-family: "Avenir-Demi";
+        font-weight: bold;
+    }
+
+    &__icons-container {
+        display: flex;
+        padding: 1.44rem .5rem;
+        justify-content: space-around;
+        width: 40%;
+    }
+
+    &__icons {
+        height: 1.5rem;
+        width: 1.5rem;        
+        
+        
+    }
+
+    .navbar__logo {
+        display: none;
+        
+    }
+
+    &__contact-name {
+        @include footertext-mobile;
+       
+    }
+    &__contact-name-style {
+        margin-top: 0.1rem;
+    }
+
+    &__contact-details {
+        @include footertext-mobile;
+        font-weight: 100;
+        font-size: .79rem;
+        margin: auto 0;
+    }
+
+    &__contact-copyright {
+        padding-top:1rem;
+        padding-bottom: 2rem;
+    }
 }

@@ -137,29 +137,33 @@ html, body {
   padding: .3rem 1rem 0;
   font-family: "Avenir-Bold";
   font-size: 1.5rem;
+  margin-bottom: .3rem;
 }
 
 .shows__main-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   padding-left: 1rem;
-  margin: auto 0;
+}
+
+.shows__date {
+  margin-bottom: 0;
+  height: 1rem;
 }
 
 .shows__date-header {
   color: #AFAFAF;
-  padding-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .shows__date-text {
   color: black;
   font-weight: bold;
   font-size: 0.813rem;
+  margin-top: 0;
+  height: .5rem;
+}
+
+.shows__venue {
+  margin-top: 0;
 }
 
 .shows__venue-header {
@@ -176,5 +180,82 @@ html, body {
 
 .shows__location-text {
   font-size: 0.813rem;
+}
+
+.shows__button {
+  width: 18rem;
+  padding: 1rem 0;
+  font-family: "Avenir-Bold";
+  font-weight: 900;
+  color: #FAFAFA;
+  background-color: #323232;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #323232;
+}
+
+.footer__header {
+  padding: .3rem 1rem 0;
+  font-family: "Avenir-Bold";
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  font-size: 2rem;
+  margin: auto 0;
+  padding-top: 3rem;
+  font-family: "Avenir-Demi";
+  font-weight: bold;
+}
+
+.footer__icons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.44rem .5rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 40%;
+}
+
+.footer__icons {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.footer .navbar__logo {
+  display: none;
+}
+
+.footer__contact-name {
+  font-size: 0.83rem;
+  color: #FAFAFA;
+  line-height: 1.25rem;
+  padding-left: 1rem;
+}
+
+.footer__contact-name-style {
+  margin-top: 0.1rem;
+}
+
+.footer__contact-details {
+  font-size: 0.83rem;
+  color: #FAFAFA;
+  line-height: 1.25rem;
+  padding-left: 1rem;
+  font-weight: 100;
+  font-size: .79rem;
+  margin: auto 0;
+}
+
+.footer__contact-copyright {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 /*# sourceMappingURL=shows.css.map */
