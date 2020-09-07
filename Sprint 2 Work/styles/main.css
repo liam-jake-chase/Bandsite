@@ -588,13 +588,19 @@ html, body {
   height: 2.5rem;
   background-color: #FAFAFA;
   border-radius: .25rem;
+  border: #E1E1E1 solid 2px;
 }
 
 .comments__label-style-comments {
   width: 13.5rem;
-  height: 6rem;
   background-color: #FAFAFA;
   border-radius: .25rem;
+  padding-bottom: 6rem;
+  border: #E1E1E1 solid 2px;
+}
+
+.comments__label-style-comments:focus {
+  border: black solid 2px;
 }
 
 .comments__button {

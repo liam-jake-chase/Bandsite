@@ -484,6 +484,8 @@ html, body {
 
 }
 
+
+
 .comments {
     @include display-mobile;
 
@@ -538,15 +540,22 @@ html, body {
         height: 2.5rem;
         background-color: $second-color;
         border-radius: .25rem;
+        border: #E1E1E1 solid 2px;
     }
 
+    // Couldnt get the focus to work :(
     &__label-style-comments {
-        width: 13.5rem;
-        height: 6rem;
+        width: 13.5rem;        
         background-color: $second-color;
         border-radius: .25rem;
-        
+        padding-bottom: 6rem;
+        border: #E1E1E1 solid 2px;
+        &:focus {
+            border: black solid 2px;
+        }        
     }
+
+       
 
     &__button {
        margin-top: 1rem;
