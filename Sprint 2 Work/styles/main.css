@@ -619,8 +619,8 @@ html, body {
 }
 
 .comments__name {
-  margin: 0 1rem 1rem 0;
-  padding-top: 1rem;
+  margin: 0 1rem 0 0;
+  padding-top: .5rem;
   font-size: .8rem;
 }
 
@@ -628,11 +628,18 @@ html, body {
   color: #AFAFAF;
   justify-items: flex-end;
   width: 5.5rem;
-  margin: 0 auto;
+  margin: .5rem auto;
   margin-right: 0;
 }
 
 .comments__text-comment {
+  width: 14.1rem;
+  margin: 0 0 0 4rem;
+  font-size: .9rem;
+}
+
+.comments__text-wrapper {
   border-bottom: solid #AFAFAF 2px;
+  padding-bottom: .8rem;
 }
 /*# sourceMappingURL=main.css.map */

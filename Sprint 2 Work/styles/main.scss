@@ -573,8 +573,8 @@ html, body {
     }
 
     &__name {
-        margin: 0 1rem 1rem 0;
-        padding-top: 1rem;
+        margin: 0 1rem 0 0;
+        padding-top: .5rem;
         font-size: .8rem;
         
     }
@@ -584,13 +584,20 @@ html, body {
         color: $third-color;
         justify-items: flex-end;
         width: 5.5rem;
-        margin: 0 auto;
+        margin: .5rem auto;
         margin-right: 0
     }
 
    
     &__text-comment {
+        width: 14.1rem;
+        margin: 0 0 0 4rem;
+        font-size: .9rem; 
+    }
+
+    &__text-wrapper {
         border-bottom: solid $third-color 2px;
+        padding-bottom: .8rem;
     }
 }
 

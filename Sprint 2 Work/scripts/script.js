@@ -85,19 +85,19 @@ displayComment(postedList);
             commentsSection.className = "comments__section";
 
             let circleSection = document.createElement("div");
-            commentsContainer.appendChild(circleSection);
+            commentsSection.appendChild(circleSection);
             circleSection.className ="comments__circle-section";
 
             let nameSection = document.createElement("div");
-            commentsContainer.appendChild(nameSection);
+            commentsSection.appendChild(nameSection);
             nameSection.className = "comments__name-section";
 
             let circle = document.createElement("div");
-            commentsContainer.appendChild(circle);
+            commentsSection.appendChild(circle);
             circle.className = "comments__circle";
 
             let name = document.createElement("h4")
-            commentsContainer.appendChild(name);
+            commentsSection.appendChild(name);
             name.innerHTML = newComment.name;
             name.className = "comments__name";  
             
@@ -118,7 +118,7 @@ displayComment(postedList);
             const dateToday = formatDate(new Date());
                       
             let newDate = document.createElement("p");            
-            commentsContainer.appendChild(newDate);
+            commentsSection.appendChild(newDate);
             newDate.innerHTML = dateToday;
             newDate.className = "comments__date";
 
