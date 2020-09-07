@@ -517,7 +517,11 @@ html, body {
     &__section {
         display: flex;
         flex-direction: row;
-        padding-top: 1.0rem;       
+        padding-top: 1.0rem;     
+        
+        @include tablet {
+            justify-items: flex-start;
+        }
         
     }
 
@@ -644,6 +648,11 @@ html, body {
         margin: 0 1rem 0 0;
         padding-top: .5rem;
         font-size: .8rem;
+
+        @include tablet {
+            margin: 0 auto;
+            width: 8rem;
+        }
         
     }
     
@@ -653,7 +662,15 @@ html, body {
         justify-items: flex-end;
         width: 5.5rem;
         margin: .5rem auto;
-        margin-right: 0
+        margin-right: 0;
+
+        @include tablet {
+            
+            margin-right: 23rem;
+            font-size: .8rem;
+            width: 2rem;
+        }
+        
     }
 
    
@@ -661,11 +678,16 @@ html, body {
         width: 14.1rem;
         margin: 0 0 0 4rem;
         font-size: .9rem; 
+
+        @include tablet {
+            width: 32rem;
+        }
     }
 
     &__text-wrapper {
         border-bottom: solid $third-color 2px;
         padding-bottom: .8rem;
+        
     }
 }
 

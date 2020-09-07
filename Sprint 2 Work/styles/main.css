@@ -569,6 +569,12 @@ html, body {
   padding-top: 1.0rem;
 }
 
+@media (min-width: 768px) {
+  .comments__section {
+    justify-items: flex-start;
+  }
+}
+
 .comments__posted-list {
   padding: 0 1rem 1.5rem 1rem;
 }
@@ -707,6 +713,13 @@ html, body {
   font-size: .8rem;
 }
 
+@media (min-width: 768px) {
+  .comments__name {
+    margin: 0 auto;
+    width: 8rem;
+  }
+}
+
 .comments__date {
   color: #AFAFAF;
   justify-items: flex-end;
@@ -715,10 +728,24 @@ html, body {
   margin-right: 0;
 }
 
+@media (min-width: 768px) {
+  .comments__date {
+    margin-right: 23rem;
+    font-size: .8rem;
+    width: 2rem;
+  }
+}
+
 .comments__text-comment {
   width: 14.1rem;
   margin: 0 0 0 4rem;
   font-size: .9rem;
+}
+
+@media (min-width: 768px) {
+  .comments__text-comment {
+    width: 32rem;
+  }
 }
 
 .comments__text-wrapper {
