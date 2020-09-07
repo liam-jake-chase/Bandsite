@@ -332,7 +332,7 @@ html, body {
     .photo__container {
         display: flex;
         flex-wrap: wrap;
-        padding-left: 2rem;
+        padding: 0 1rem;
     }
 
 
@@ -491,6 +491,8 @@ html, body {
 
     &__header {
         @include header-mobile;
+        padding-left: 2rem;
+        font-size: 2.5rem;
     }
 
     &__container {
@@ -498,9 +500,20 @@ html, body {
         padding-bottom: 1rem;
         border-bottom: solid $third-color 2px;
         margin: 0 1rem;
+
+        @include tablet {
+            width: 36rem;
+            margin: 0 6.5rem;
+            flex-direction: column;
+            
+
+            
+            
+        }
         
     }
 
+   
     &__section {
         display: flex;
         flex-direction: row;
@@ -510,6 +523,13 @@ html, body {
 
     &__posted-list {
         padding: 0 1rem 1.5rem 1rem;
+
+        @include tablet {
+            width: 36rem;
+            margin: 0 auto;
+            padding-bottom: 3rem;
+
+        }
     }
 
     &__image {
@@ -517,6 +537,21 @@ html, body {
         width: 3rem;
         margin: 1rem 1rem 0 0;
         border-radius: 3rem;
+        
+
+        @include tablet {
+            margin-left: 6rem;
+            position: absolute;
+        }  
+    }
+
+    @include tablet {
+        &__name-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin: auto 0;
+        }
     }
 
     &__label-name {
@@ -525,7 +560,13 @@ html, body {
         color: $third-color;
         font-weight: bold;
         margin: 0 auto;
+
+        @include tablet {
+           margin-left: 10.5rem;
+
+        }
     }
+
 
     &__label-comment {
         font-size: .75rem;
@@ -533,26 +574,39 @@ html, body {
         color: $third-color;
         font-weight: bold;
         margin-bottom: 0;
+        @include tablet {
+            margin-right: 21.5rem;
+            padding-top: 1rem;
+        }
     }
 
     &__label-style-name {
-        width: 13.5rem;
+        width: 13.3rem;
         height: 2.5rem;
         background-color: $second-color;
         border-radius: .25rem;
         border: #E1E1E1 solid 2px;
+
+        @include tablet {
+            width: 25rem;
+        }
     }
 
-    // Couldnt get the focus to work :(
+   
     &__label-style-comments {
-        width: 13.5rem;        
+        width: 13.3rem;        
         background-color: $second-color;
         border-radius: .25rem;
         padding-bottom: 6rem;
         border: #E1E1E1 solid 2px;
         &:focus {
             border: black solid 2px;
-        }        
+        } 
+        
+        @include tablet {
+            width: 25rem;
+            padding-bottom: 4rem;
+        }
     }
 
        
@@ -568,6 +622,11 @@ html, body {
        border-style: solid;
        border: .3rem;
        margin-bottom: 2rem;
+
+       @include tablet {
+           padding-left: 3rem;
+           padding-right: 3rem;
+       }
        
     }
 

@@ -75,12 +75,14 @@
                 <img class="comments__image" src="assets/Images/Mohan-muruge.jpg" alt="image of mohan">
                 <form action="submit" class="comments__form" tabindex="1">
 
-                    <label for="name" class="comments__label-name">NAME</label>
-                    <input type="text" class="comments__label-style-name" name="name" placeholder="Enter your name">
-
-                    <label for="comment" class="comments__label-comment">COMMENT</label>
+                    <div class="comments__name-wrapper">
+                        <label for="name" class="comments__label-name">NAME</label>
+                        <input type="text" class="comments__label-style-name" name="name" placeholder="Enter your name">
+                     
+                        <label for="comment" class="comments__label-comment">COMMENT</label>
                         <input type="text" class="comments__label-style-comments" name="comment" placeholder="Add a new comment">
-                    <button class="comments__button" type="submit">COMMENT</button>
+                     <button class="comments__button" type="submit">COMMENT</button>
+                    </div>   
                 </form> 
             </div>        
          <div class="comments__posted-list"></div>
