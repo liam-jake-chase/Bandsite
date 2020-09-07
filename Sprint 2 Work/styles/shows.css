@@ -227,7 +227,7 @@ html, body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-bottom: 2.5rem;
+    padding: 0 1.5rem 2.5rem 1.5rem;
   }
 }
 
@@ -295,7 +295,6 @@ html, body {
   .shows__date-text {
     width: 14.5rem;
     margin: auto 0;
-    padding-left: 1rem;
     font-family: "Avenir";
     font-size: 1rem;
     font-weight: 900;
@@ -362,7 +361,7 @@ html, body {
 @media (min-width: 768px) {
   .shows__button {
     width: 10.5rem;
-    margin: 1rem 1rem 1rem 0;
+    margin: 1rem 0;
   }
 }
 
@@ -423,6 +422,12 @@ html, body {
   height: 5rem;
 }
 
+@media (min-width: 768px) {
+  .shows__info-container {
+    border-radius: 0;
+  }
+}
+
 @media (min-width: 1200px) {
   .shows__info-container {
     width: 90%;
@@ -432,14 +437,13 @@ html, body {
 
 .shows__date-header-large {
   color: #AFAFAF;
-  margin-left: 1rem;
   width: 14.5rem;
 }
 
 @media (min-width: 1200px) {
   .shows__date-header-large {
     margin-left: 0;
-    width: 14rem;
+    width: 14.1rem;
   }
 }
 

@@ -25,29 +25,30 @@ let postedList = [
         let commentsContainer = document.querySelector(".comments__posted-list");
 
         for (let i = 0; i < listArray.length; i++) {
+
             let commentsSection = document.createElement("div");
             commentsContainer.appendChild(commentsSection);
             commentsSection.className = "comments__section";
 
             let circleSection = document.createElement("div");
-            commentsContainer.appendChild(circleSection);
+            commentsSection.appendChild(circleSection);
             circleSection.className ="comments__circle-section";
 
             let nameSection = document.createElement("div");
-            commentsContainer.appendChild(nameSection);
+            commentsSection.appendChild(nameSection);
             nameSection.className = "comments__name-section";
 
             let circle = document.createElement("div");
-            commentsContainer.appendChild(circle);
+            commentsSection.appendChild(circle);
             circle.className = "comments__circle";
 
             let name = document.createElement("h4")
-            commentsContainer.appendChild(name);
+            commentsSection.appendChild(name);
             name.innerHTML = listArray[i]["name"];
             name.className = "comments__name";            
                       
             let date = document.createElement("p");            
-            commentsContainer.appendChild(date);
+            commentsSection.appendChild(date);
             date.innerHTML = listArray[i]["date"];
             date.className = "comments__date";
 

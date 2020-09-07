@@ -493,12 +493,27 @@ html, body {
 
     &__container {
         display:flex;
+        padding-bottom: 1rem;
+        border-bottom: solid $third-color 2px;
+        margin: 0 1rem;
+        
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: row;
+        padding-top: 1.0rem;       
+        
+    }
+
+    &__posted-list {
+        padding: 0 1rem 1.5rem 1rem;
     }
 
     &__image {
         height: 3rem;
         width: 3rem;
-        padding: 1rem;
+        margin: 1rem 1rem 0 0;
         border-radius: 3rem;
     }
 
@@ -552,11 +567,31 @@ html, body {
         border-radius: 50%;
         width: 3rem;
         height: 3rem;
-        flex-direction: row;
+        margin-right: 1rem;
+
+              
+    }
+
+    &__name {
+        margin: 0 1rem 1rem 0;
+        padding-top: 1rem;
+        font-size: .8rem;
         
+    }
+    
+
+    &__date {
+        color: $third-color;
+        justify-items: flex-end;
+        width: 5.5rem;
+        margin: 0 auto;
+        margin-right: 0
     }
 
    
+    &__text-comment {
+        border-bottom: solid $third-color 2px;
+    }
 }
 
 
