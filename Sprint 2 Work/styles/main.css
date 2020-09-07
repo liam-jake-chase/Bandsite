@@ -306,6 +306,7 @@ html, body {
     margin: 0;
     padding-top: 2rem;
     padding-right: 2rem;
+    padding-left: 1rem;
   }
   .hero {
     height: 25rem;
@@ -313,6 +314,7 @@ html, body {
   .hero__title {
     line-height: 4.25rem;
     font-size: 3.75rem;
+    padding-left: 1rem;
   }
   .about__header {
     font-size: 1.5rem;
@@ -395,6 +397,7 @@ html, body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    justify-items: flex-end;
   }
   .footer__container {
     display: -webkit-box;
@@ -465,8 +468,8 @@ html, body {
     margin: 2.4rem 0;
   }
   .about__image {
-    width: 45rem;
-    height: 27rem;
+    width: 56rem;
+    height: 28.125rem;
     margin: 0 auto;
   }
   .about__sub-header {
@@ -486,10 +489,17 @@ html, body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .photo__header {
+    padding-left: 3rem;
+  }
+  .photo__container {
+    padding: 0 11.25rem;
+    margin: 0 auto;
+  }
   .photo__image {
-    width: 30%;
-    height: 28%;
-    margin-left: 0;
+    width: 21.5rem;
+    height: 12.25rem;
+    margin: 0 auto;
   }
   .footer {
     padding: 0.775rem 9rem 2.4rem 9rem;
@@ -534,7 +544,7 @@ html, body {
   padding: .3rem 1rem 0;
   font-family: "Avenir-Bold";
   font-size: 1.5rem;
-  padding-left: 2rem;
+  padding-left: 3rem;
   font-size: 2.5rem;
 }
 
@@ -550,11 +560,17 @@ html, body {
 @media (min-width: 768px) {
   .comments__container {
     width: 36rem;
-    margin: 0 6.5rem;
+    margin: 0 6rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media (min-width: 1200px) {
+  .comments__container {
+    margin-left: 19.5rem;
   }
 }
 
@@ -601,6 +617,12 @@ html, body {
   }
 }
 
+@media (min-width: 1200px) {
+  .comments__image {
+    margin-left: 0;
+  }
+}
+
 @media (min-width: 768px) {
   .comments__name-wrapper {
     display: -webkit-box;
@@ -631,6 +653,12 @@ html, body {
   }
 }
 
+@media (min-width: 1200px) {
+  .comments__label-name {
+    margin-left: 6.9rem;
+  }
+}
+
 .comments__label-comment {
   font-size: .75rem;
   line-height: 1.25rem;
@@ -646,6 +674,12 @@ html, body {
   }
 }
 
+@media (min-width: 1200px) {
+  .comments__label-comment {
+    margin-right: 25.25rem;
+  }
+}
+
 .comments__label-style-name {
   width: 13.3rem;
   height: 2.5rem;
@@ -657,6 +691,12 @@ html, body {
 @media (min-width: 768px) {
   .comments__label-style-name {
     width: 25rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .comments__label-style-name {
+    width: 28.75rem;
   }
 }
 
@@ -676,6 +716,12 @@ html, body {
   .comments__label-style-comments {
     width: 25rem;
     padding-bottom: 4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .comments__label-style-comments {
+    width: 28.75rem;
   }
 }
 
