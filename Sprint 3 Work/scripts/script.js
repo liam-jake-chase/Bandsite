@@ -3,67 +3,71 @@
 
 const APIkey = "2ba0a00c-8dbc-4e0f-a231-e06793c9594d";
 
-let APIresponse = () => {
+
+let getResponse = () => {
     axios
-    .get("https://project-1-api.herokuapp.com/comments?api_key=2ba0a00c-8dbc-4e0f-a231-e06793c9594d")
-    .then(reponse => console.log(response));
+    .get("https://project-1-api.herokuapp.com/comments?api_key=" + APIkey)
+    .then( response => {
+        console.log(response)
+         displayComment(response.data)
+    });
+
 }
-
-    
-
-
-
-
-
-
+getResponse();
 
 // Array for comments section 
     // Original comments to show
 
-//     function displayComment(show) {
+    function displayComment(listArray) {
     
-//         let commentsContainer = document.querySelector(".comments__posted-list");
+        let commentsContainer = document.querySelector(".comments__posted-list");
 
+            listArray.forEach(listArray => {
         
-//         showDates = (show) => {
-//             let commentsSection = document.createElement("div");
-//             commentsContainer.appendChild(commentsSection);
-//             commentsSection.className = "comments__section";
+            let commentsSection = document.createElement("div");
+            commentsContainer.appendChild(commentsSection);
+            commentsSection.className = "comments__section";
 
-//             let circleSection = document.createElement("div");
-//             commentsSection.appendChild(circleSection);
-//             circleSection.className ="comments__circle-section";
+            let circleSection = document.createElement("div");
+            commentsSection.appendChild(circleSection);
+            circleSection.className ="comments__circle-section";
 
-//             let nameSection = document.createElement("div");
-//             commentsSection.appendChild(nameSection);
-//             nameSection.className = "comments__name-section";
+            let nameSection = document.createElement("div");
+            commentsSection.appendChild(nameSection);
+            nameSection.className = "comments__name-section";
 
-//             let circle = document.createElement("div");
-//             commentsSection.appendChild(circle);
-//             circle.className = "comments__circle";
+            let circle = document.createElement("div");
+            commentsSection.appendChild(circle);
+            circle.className = "comments__circle";
 
-//             let name = document.createElement("h4")
-//             commentsSection.appendChild(name);
-//             name.innerHTML = listArray[i]["name"];
-//             name.className = "comments__name";            
+            let name = document.createElement("h4")
+            commentsSection.appendChild(name);
+            name.innerHTML = listArray.name;
+            name.className = "comments__name";   
+            
+            let arrayDate = new Date(listArray.timestamp);
+            let properDate = arrayDate
+            .getUTCMonth() + 1 + "/" + 
+            arrayDate.getUTCDate() + "/" + 
+            arrayDate.getUTCFullYear();
                       
-//             let date = document.createElement("p");            
-//             commentsSection.appendChild(date);
-//             date.innerHTML = listArray[i]["date"];
-//             date.className = "comments__date";
+            let date = document.createElement("p");            
+            commentsSection.appendChild(date);
+            date.innerHTML = properDate;
+            date.className = "comments__date";
 
-//             let textSection = document.createElement("div");
-//             commentsContainer.appendChild(textSection);
-//             textSection.className = "comments__text-wrapper";
+            let textSection = document.createElement("div");
+            commentsContainer.appendChild(textSection);
+            textSection.className = "comments__text-wrapper";
                       
-//             let comments = document.createElement("p");            
-//             textSection.appendChild(comments);
-//             comments.innerHTML = listArray[i]["comment"];
-//             comments.className = " comments__text-comment";
-//         }
-//     }
+            let comments = document.createElement("p");            
+            textSection.appendChild(comments);
+            comments.innerHTML = listArray.comment;
+            comments.className = " comments__text-comment";
+        })
+    }
 
-// displayComment(show);
+
 
 // Inserting a new comment function
 
@@ -153,4 +157,3 @@ let APIresponse = () => {
        
 
        
-    
