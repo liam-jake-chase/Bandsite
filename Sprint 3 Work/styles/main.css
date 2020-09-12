@@ -19,7 +19,8 @@
   font-weight: bold;
 }
 
-html, body {
+html,
+body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
@@ -36,6 +37,20 @@ html, body {
   height: 5rem;
   background-color: #323232;
   color: #FAFAFA;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 0 1.5rem;
+  }
 }
 
 .navbar__list {
@@ -71,6 +86,17 @@ html, body {
   color: #AFAFAF;
 }
 
+@media (min-width: 768px) {
+  .navbar__link {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 12%;
+    padding-top: 1.5rem;
+    margin: 0 1.5rem;
+  }
+}
+
 .navbar__link-view {
   border-bottom: solid 0.25rem white;
   color: #FAFAFA;
@@ -88,6 +114,16 @@ html, body {
   height: 1.20rem;
 }
 
+@media (min-width: 768px) {
+  .navbar__logo {
+    width: auto;
+    margin: 0;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-left: 1rem;
+  }
+}
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -99,6 +135,12 @@ html, body {
   padding-left: 1rem;
   height: 11.5rem;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    height: 25rem;
+  }
 }
 
 .hero__opacity {
@@ -125,6 +167,14 @@ html, body {
   font-family: "Avenir-Bold";
 }
 
+@media (min-width: 768px) {
+  .hero__title {
+    line-height: 4.25rem;
+    font-size: 3.75rem;
+    padding-left: 1rem;
+  }
+}
+
 .about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,12 +191,27 @@ html, body {
   font-size: 1.5rem;
 }
 
+@media (min-width: 768px) {
+  .about__header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-left: 1.75rem;
+  }
+}
+
 .about__musicians {
   width: 90%;
   margin: auto;
   height: 8.99rem;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .about__musicians {
+    width: 45rem;
+    height: 22.625rem;
+  }
 }
 
 .about__subheader {
@@ -158,10 +223,27 @@ html, body {
   font-family: "Avenir-Bold";
 }
 
+@media (min-width: 768px) {
+  .about__subheader {
+    margin: 0;
+    padding: 2rem 2rem 0;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
 .about__signature {
   font-family: "Avenir";
   font-size: .8rem;
   padding: .6rem 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .about__signature {
+    font-weight: 100;
+    font-size: 1rem;
+    padding: .6rem 2rem 0;
+  }
 }
 
 .about__paragraph-title {
@@ -283,75 +365,6 @@ html, body {
 }
 
 @media (min-width: 768px) {
-  .navbar {
-    height: 5rem;
-    background-color: #323232;
-    color: #FAFAFA;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    padding: 0 1.5rem;
-  }
-  .navbar__link {
-    text-decoration: none;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 12%;
-    font-size: .9rem;
-    padding-top: 1.5rem;
-    padding-bottom: .5rem;
-    margin: 0 1.5rem;
-    border-bottom: solid 0.25rem transparent;
-    color: #AFAFAF;
-  }
-  .navbar__link-view {
-    border-bottom: solid 0.25rem white;
-    color: #FAFAFA;
-  }
-  .navbar__logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: auto;
-    margin: 0;
-    padding-top: 2rem;
-    padding-right: 2rem;
-    padding-left: 1rem;
-  }
-  .hero {
-    height: 25rem;
-  }
-  .hero__title {
-    line-height: 4.25rem;
-    font-size: 3.75rem;
-    padding-left: 1rem;
-  }
-  .about__header {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    padding-left: 1.75rem;
-  }
-  .about__musicians {
-    width: 93%;
-    height: 22.625rem;
-  }
-  .about__subheader {
-    margin: 0;
-    padding: 2rem 2rem 0;
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-  .about__signature {
-    font-weight: 100;
-    font-size: 1rem;
-    padding: .6rem 2rem 0;
-  }
   .about__paragraph-title {
     font-size: 1.5rem;
     padding: 0 2rem;
