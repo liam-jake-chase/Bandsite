@@ -48,6 +48,12 @@ html, body {
   list-style: none;
 }
 
+@media (min-width: 768px) {
+  .navbar__list {
+    width: 100%;
+  }
+}
+
 .navbar__link {
   text-decoration: none;
   display: -webkit-box;

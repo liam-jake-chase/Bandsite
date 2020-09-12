@@ -25,7 +25,12 @@ html, body {
     flex-wrap:wrap;
     margin-left: 0;
     list-style: none;
+
+    @include tablet {
+        width: 100%;
     }
+    }
+
       
     &__link {
      text-decoration: none;
