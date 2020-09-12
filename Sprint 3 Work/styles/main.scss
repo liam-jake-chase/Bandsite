@@ -1,6 +1,6 @@
-@import "../partials/fonts";
-@import "../partials/variables";
-@import "../partials/mixins";
+@import "./partials/fonts";
+@import "./partials/variables";
+@import "./partials/mixins";
 
 html, body {
     box-sizing: border-box;
@@ -10,14 +10,22 @@ html, body {
 }
 
 
-
+.navbar ul {
+    margin: 0;
+    padding: 0;
+}
 
 .navbar {
     height: 5rem;
     background-color:$main-color;
-    color: $second-color;
+    color: $second-color;    
+    
+    &__list {
     display: flex;
     flex-wrap:wrap;
+    margin-left: 0;
+    list-style: none;
+    }
       
     &__link {
      text-decoration: none;
@@ -36,8 +44,6 @@ html, body {
         color: $second-color;  
     }
     
-    
-
     &__logo {
         display: flex;
         justify-content: center;
