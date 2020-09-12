@@ -1,0 +1,749 @@
+@import "../partials/fonts";
+@import "../partials/variables";
+@import "../partials/mixins";
+
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Avenir"
+}
+
+
+
+
+.navbar {
+    height: 5rem;
+    background-color:$main-color;
+    color: $second-color;
+    display: flex;
+    flex-wrap:wrap;
+      
+    &__link {
+     text-decoration: none;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     width: 50%;
+     font-size: .9rem;
+     padding-bottom:.5rem;
+     border-bottom: solid 0.25rem transparent;
+     color: $third-color;
+    } 
+      
+    &__link-view {
+        border-bottom: solid 0.25rem white; 
+        color: $second-color;  
+    }
+    
+    
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 1rem auto;
+        height: 1.20rem;
+        
+
+    }
+}
+
+.hero {
+    display: flex;    
+    background-image: url("../assets/Images/hero.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 1rem;
+    height: 11.5rem;
+    position: relative;
+
+    &__opacity {
+        background-color: $third-color;
+        opacity: .2;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left:0;
+    }
+    
+    &__title {
+     color: $text-color;
+     display: flex;
+     align-items: center;
+     line-height: 2rem;
+     font-size: 1.45rem;
+     font-weight: 700;
+     width: 70%;
+     font-family: "Avenir-Bold"
+             
+    }
+}  
+
+.about {
+    @include display-mobile;
+
+    &__header {
+        @include header-mobile;
+    }
+
+    &__musicians {
+        @include photo-mobile;
+    }
+
+    &__subheader {
+        width: 91%;
+        margin: auto;
+        padding: 1.5rem 0 0;
+        font-size: 1rem;
+        line-height: 1.35rem;
+        font-family: "Avenir-Bold";
+    }
+
+    &__signature {
+        font-family: "Avenir";
+        font-size: .8rem;
+        padding: .6rem 1rem 0;
+        
+    }
+
+    &__paragraph-title {
+        font-family: "Avenir-Bold";
+        font-size: 1rem;
+        padding: 0 1.2rem;
+    }
+
+    &__paragraph-main {
+        margin: 0 auto;
+        font-size: 0.75rem;
+        padding: 1rem 1rem;
+        line-height: 1.15rem;
+        width: 88%;
+
+        &__two{
+            padding-top: .5rem;
+            padding-bottom: 1.55rem;
+        }        
+    }
+}
+
+.photo {
+    @include display-mobile;
+    background-color: $second-color;
+    padding-bottom: 2.5rem;
+
+    &__header {
+        @include header-mobile;
+        margin-bottom: 0;
+        margin-top: .1rem;
+        padding-bottom: .5rem;
+        padding-top: 1.5rem;
+    }
+
+    &__image {
+        width: 90%;
+        margin: 0 auto;
+        height: 10.35rem;
+        object-fit: cover;
+        padding: .5rem 0 0 1rem;
+    }
+    
+}
+
+.footer {
+    @include display-mobile;
+    background-color: $main-color;
+
+    &__header {
+        @include header-mobile;
+        color: $text-color;
+        font-size: 2rem;
+        margin: auto 0;
+        padding-top: 3rem;
+        font-family: "Avenir-Demi";
+        font-weight: bold;
+    }
+
+    &__icons-container {
+        display: flex;
+        padding: 1.44rem .5rem;
+        justify-content: space-around;
+        width: 40%;
+    }
+
+    &__icons {
+        height: 1.5rem;
+        width: 1.5rem;        
+        
+        
+    }
+
+    .navbar__logo {
+        display: none;
+        
+    }
+
+    &__contact-name {
+        @include footertext-mobile;
+       
+    }
+    &__contact-name-style {
+        margin-top: 0.1rem;
+    }
+
+    &__contact-details {
+        @include footertext-mobile;
+        font-weight: 100;
+        font-size: .79rem;
+        margin: auto 0;
+    }
+
+    &__contact-copyright {
+        padding-top:1rem;
+        padding-bottom: 2rem;
+    }
+}
+
+@include tablet {
+    
+.navbar {
+    height: 5rem;
+    background-color:$main-color;
+    color: $second-color;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 0 1.5rem;
+      
+    &__link {
+     text-decoration: none;
+     align-items: center;
+     width: 12%;
+     font-size: .9rem;
+     padding-top:1.5rem;
+     padding-bottom:.5rem;
+     margin: 0 1.5rem;
+     border-bottom: solid 0.25rem transparent;
+     color: $third-color;
+    } 
+      
+    &__link-view {
+        border-bottom: solid 0.25rem white; 
+        color: $second-color;  
+    }
+    
+    
+
+    &__logo {
+        display: flex;
+        width: auto;
+        margin: 0;
+        padding-top: 2rem;
+        padding-right: 2rem;
+        padding-left: 1rem;
+        
+        
+
+    }
+}
+
+.hero {
+    height: 25rem;
+    
+    &__title {
+     line-height: 4.25rem;
+     font-size: 3.75rem;
+     padding-left: 1rem;
+    }
+}  
+
+.about {
+
+    &__header {
+       font-size: 1.5rem;
+       line-height: 2rem;
+       padding-left: 1.75rem;
+    }
+
+    &__musicians {
+        width: 93%;
+        height: 22.625rem;
+    }
+    
+    &__subheader {
+        
+        margin: 0;
+        padding: 2rem 2rem 0;
+        font-size: 1.5rem;
+        line-height: 2rem;
+       
+    }
+
+    &__signature {
+        font-weight: 100;
+        font-size: 1rem;
+        padding: .6rem 2rem 0;
+    }
+
+    
+    &__paragraph-title {
+        
+        font-size: 1.5rem;
+        padding: 0 2rem;
+    }
+
+    &__paragraph-column {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        width: 95%;
+    }
+
+    
+    &__paragraph-main {
+        margin: 0 auto;
+        font-size: 0.875rem;
+        padding-left: 2rem;
+        line-height: 1.375rem;
+        width: 80%;
+
+        &__two {
+            margin-left: 0;
+            
+           
+        }        
+    }
+}
+
+.photo {
+    
+
+    
+    &__image {
+        width: 30%;
+        height: 28%;
+        margin-left: 0;
+    }
+
+    &__header {
+        margin-left: 0;
+        padding-left: 2rem;
+    }
+
+    .photo__container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 1rem;
+    }
+
+
+}
+
+.footer {
+
+    &__container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+                
+    }
+
+    &__icons {
+        height: 2rem;
+        width: 2rem;
+        
+        padding-top: 2rem;
+        height: 1rem;
+        width: 1rem;
+    }
+
+    .navbar__logo {
+        display: flex;
+        justify-items: flex-end;
+               
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+    }
+
+    &__logo {
+        flex-direction: flex-end;
+    }
+    
+
+    &__container-deets {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2rem;
+        padding: 0 2rem;
+        
+
+    }
+
+    &__contact-copyright {
+        flex-wrap: wrap;
+        padding: 5rem;
+        margin: 0 auto;
+        width: 40%;
+
+        
+    
+    }
+
+    .photo__container {
+        padding-left: 5rem;  
+        margin: auto;
+        
+        &__header {
+            padding-left: 2rem;
+       
+    }
+}
+}
+
+@include desktop {
+    .navbar {
+        padding: 0 9rem;
+        &__anchor {
+          margin-left: 2.8rem;
+          width: 5rem;
+          &:hover {
+            font-size: 1rem;
+            transition: 0.3s;
+            font-family: 'Avenir-Bold';
+            color: #FFFFFF;
+            border-bottom: 0.25rem solid white;
+          }
+        }
+      }
+      .hero {
+        padding: 0 9rem;
+        height: 33.5rem;
+      }
+      .about {
+        padding: 0 10rem;
+        margin-bottom: 2.4rem;
+        &__header {
+          margin: 2.4rem 0 ;
+          
+        }
+        &__image {
+          width: 56rem;
+          height: 28.125rem;
+          margin: 0 auto;
+        }
+        &__sub-header {
+          margin: 2.5rem 0 1.6rem 0;
+        }
+
+        &__paragraph-column {
+            &__paragraph-main {
+                margin-right: 1.25rem;
+              }
+              
+     }
+        &__container {
+          padding: 0 6.1rem;
+        }
+        
+      }
+      .photo {
+          flex-direction: column;
+          flex-wrap: wrap;
+
+        &__header {
+            padding-left: 3rem;
+        }  
+          
+        
+        &__container {
+            padding: 0 11.25rem;
+            margin: 0 auto;
+        }
+    
+
+        &__image {
+            width: 21.5rem;
+            height: 12.25rem;
+            margin: 0 auto;
+        }
+      }
+      .footer {
+
+        &__container-deets{
+            display: flex;
+        }
+
+        padding: 0.775rem 9rem 2.4rem 9rem;
+        &__container-deets {
+          justify-content: space-between;
+        }
+        &__icons {
+          margin-right: auto;
+          padding-left: 3rem;
+        }
+
+        .navbar__logo {
+            display: flex;
+            flex-direction: flex-end;
+            margin-left: 0;
+        }
+        
+    }
+
+}
+
+}
+
+
+
+.comments {
+    @include display-mobile;
+
+    &__header {
+        @include header-mobile;
+        padding-left: 3rem;
+        font-size: 2.5rem;
+    }
+
+    &__container {
+        display:flex;
+        padding-bottom: 1rem;
+        border-bottom: solid $third-color 2px;
+        margin: 0 1rem;
+
+        @include tablet {
+            width: 36rem;
+            margin: 0 6rem;
+            flex-direction: column;
+                     
+        }
+
+        @include desktop {
+            margin-left: 19.5rem;
+        }
+        
+    }
+
+   
+    &__section {
+        display: flex;
+        flex-direction: row;
+        padding-top: 1.0rem;     
+        
+        @include tablet {
+            justify-items: flex-start;
+        }
+        
+    }
+
+    &__posted-list {
+        padding: 0 1rem 1.5rem 1rem;
+
+        @include tablet {
+            width: 36rem;
+            margin: 0 auto;
+            padding-bottom: 3rem;
+
+        }
+    }
+
+    &__image {
+        height: 3rem;
+        width: 3rem;
+        margin: 1rem 1rem 0 0;
+        border-radius: 3rem;
+        
+
+        @include tablet {
+            margin-left: 6rem;
+            position: absolute;
+        }  
+
+        @include desktop {
+            margin-left: 0;
+        }
+    }
+
+    @include tablet {
+        &__name-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin: auto 0;
+        }
+    }
+
+    &__label-name {
+        font-size: .75rem;
+        line-height: 1.25rem;
+        color: $third-color;
+        font-weight: bold;
+        margin: 0 auto;
+
+        @include tablet {
+           margin-left: 10.5rem;
+
+        }
+
+        @include desktop {
+            margin-left: 6.9rem;
+        }
+    }
+
+
+    &__label-comment {
+        font-size: .75rem;
+        line-height: 1.25rem;
+        color: $third-color;
+        font-weight: bold;
+        margin-bottom: 0;
+        @include tablet {
+            margin-right: 21.5rem;
+            padding-top: 1rem;
+        }
+
+        @include desktop {
+            margin-right: 25.25rem;
+        }
+    }
+
+    &__label-style-name {
+        width: 13.3rem;
+        height: 2.5rem;
+        background-color: $second-color;
+        border-radius: .25rem;
+        border: #E1E1E1 solid 2px;
+
+        @include tablet {
+            width: 25rem;
+        }
+
+        @include desktop {
+            width: 28.75rem;
+        }
+    }
+
+   
+    &__label-style-comments {
+        width: 13.3rem;        
+        background-color: $second-color;
+        border-radius: .25rem;
+        padding-bottom: 6rem;
+        border: #E1E1E1 solid 2px;
+        &:focus {
+            border: black solid 2px;
+        } 
+        
+        @include tablet {
+            width: 25rem;
+            padding-bottom: 4rem;
+        }
+
+        @include desktop {
+            width: 28.75rem;
+        }
+
+        
+    }
+
+       
+
+    &__button {
+       margin-top: 1rem;
+       padding: .89rem 4.7rem;
+       border-radius: .25rem;
+       background-color: $main-color;
+       color: $second-color;
+       font-weight: 100;
+       font-family: "Avenir-Demi";
+       border-style: solid;
+       border: .3rem;
+       margin-bottom: 2rem;
+
+       @include tablet {
+           padding-left: 3rem;
+           padding-right: 3rem;
+       }
+       
+    }
+
+    &__circle {
+        background-color: $third-color;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        margin-right: 1rem;
+
+              
+    }
+
+    &__name {
+        margin: 0 1rem 0 0;
+        padding-top: .5rem;
+        font-size: .8rem;
+
+        @include tablet {
+            margin: 0 auto;
+            width: 8rem;
+        }
+        
+    }
+    
+
+    &__date {
+        color: $third-color;
+        justify-items: flex-end;
+        width: 5.5rem;
+        margin: .5rem auto;
+        margin-right: 0;
+
+        @include tablet {
+            
+            margin-right: 23rem;
+            font-size: .8rem;
+            width: 2rem;
+        }
+        
+    }
+
+   
+    &__text-comment {
+        width: 14.1rem;
+        margin: 0 0 0 4rem;
+        font-size: .9rem; 
+
+        @include tablet {
+            width: 32rem;
+        }
+    }
+
+    &__text-wrapper {
+        border-bottom: solid $third-color 2px;
+        padding-bottom: .8rem;
+        
+    }
+}
+
+// I got so stuck with some of the JS code and 
+// such I didnt get back to styling everything properly from before.
+// I need to refactor the SCSS layout and rebuild the footer section
+// This will be done by the final submission!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
