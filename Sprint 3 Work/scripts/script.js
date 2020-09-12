@@ -15,19 +15,7 @@ let APIresponse = () => {
 
 
 
-// upcomingShows = () => {
-//     axios
-//       .get("https://project-1-api.herokuapp.com/showdates?api_key=" + APIkey)
-//       .then(response => {
-//         response.data.forEach(show => {
-//           showDates(show);
-//         })
-//       })
-//       .catch(error => {
-//         console.log(error);
-//       })
-//   };
-//   console.log(upcomingShows());
+
 
 // Array for comments section 
     // Original comments to show
