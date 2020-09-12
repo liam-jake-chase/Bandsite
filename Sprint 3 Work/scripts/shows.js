@@ -9,7 +9,8 @@ let getShows = () => {
         .get(APIurl + APIkey)
         .then(response => {
             console.log(response)
-            displayShows(response.data)          
+            displayShows(response.data) 
+            displayShowsLarge(response.data)         
         })
                    
 
@@ -68,7 +69,7 @@ getShows();
         locationText.className = "shows__location-text";
 
         let ticketButton = document.createElement("button");
-        ticketButton.innerText = "BUTTON";
+        ticketButton.innerText = "BUY TICKETS";
         showsContainer.appendChild(ticketButton);
         ticketButton.className = "shows__button";
 
@@ -134,7 +135,7 @@ getShows();
             locationText.className = "shows__location-text";
 
             let ticketButton = document.createElement("button");
-            ticketButton.innerText = "BUTTON";
+            ticketButton.innerText = "BUY TICKETS";
             infoContainer.appendChild(ticketButton);
             ticketButton.className = "shows__button";
 
