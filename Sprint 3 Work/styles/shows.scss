@@ -1,6 +1,6 @@
-@import "../partials/fonts";
-@import "../partials/variables";
-@import "../partials/mixins";
+@import "./partials/fonts";
+@import "./partials/variables";
+@import "./partials/mixins";
 
 html,
 body {
@@ -90,6 +90,24 @@ body {
         }
     }
 
+    &__soundcloud {
+        z-index: 2;
+        width: 95%;
+        height: 6.1rem;
+        margin-top: .5rem;
+
+        @include tablet {
+            width: 28rem;
+        }
+
+        @include desktop {
+            width: 23.25rem;
+            height: 9.125rem;
+        }
+
+
+    }
+
     &__opacity {
         background-color: $third-color;
         opacity: .2;
@@ -97,6 +115,7 @@ body {
         width: 100%;
         position: absolute;
         left: 0;
+        z-index: 0;
     }
 
     &__album {
@@ -138,24 +157,6 @@ body {
         }
 
     }
-
-    &__soundcloud {
-        width: 95%;
-        height: 6.1rem;
-        margin-top: .5rem;
-
-        @include tablet {
-            width: 28rem;
-        }
-
-        @include desktop {
-            width: 23.25rem;
-            height: 9.125rem;
-        }
-
-
-    }
-
 
 }
 
