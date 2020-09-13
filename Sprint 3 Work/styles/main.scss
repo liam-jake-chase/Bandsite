@@ -31,6 +31,11 @@ body {
         color: $third-color;
     }
 
+    a:link {
+        color: $third-color;
+    }
+    
+
 
     @include tablet {
 

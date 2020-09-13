@@ -12,22 +12,60 @@ body {
 
 
 
+.navbar ul {
+    margin: 0;
+    padding: 0;
+}
+
 
 .navbar {
     height: 5rem;
     background-color: $main-color;
     color: $second-color;
-    display: flex;
-    flex-wrap: wrap;
+
+    &__link-anchor {
+        text-decoration: none;
+
+    }
+
+    a:visited {
+        color: $third-color;
+        
+    }
+
+    a:link {
+        color: $third-color;
+    }
+    
+
 
     @include tablet {
+
+        display: flex;
         flex-wrap: nowrap;
         justify-content: flex-start;
         padding: 0 1.5rem;
     }
 
+    @include desktop {
+        padding: 0 9rem;
+    }
+
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 0;
+        list-style: none;
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+
     &__link {
-        text-decoration: none;
+
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -38,18 +76,22 @@ body {
         color: $third-color;
 
         @include tablet {
+
+            align-items: center;
             width: 12%;
-            margin: 0 1.5rem;
             padding-top: 1.5rem;
+            margin: 0 1.5rem;
+
+
         }
+
     }
 
     &__link-view {
         border-bottom: solid 0.25rem white;
         color: $second-color;
+
     }
-
-
 
     &__logo {
         display: flex;
@@ -63,10 +105,15 @@ body {
             margin: 0;
             padding-top: 2rem;
             padding-right: 2rem;
+            padding-left: 1rem;
+
+
         }
+
 
     }
 }
+
 
 .hero {
     display: flex;
@@ -90,8 +137,10 @@ body {
         }
     }
 
+    
+
     &__soundcloud {
-        z-index: 2;
+        z-index: 1;
         width: 95%;
         height: 6.1rem;
         margin-top: .5rem;
@@ -108,9 +157,13 @@ body {
 
     }
 
+    &__embed {
+        z-index: 2;
+    }
+
     &__opacity {
         background-color: $third-color;
-        opacity: .2;
+        opacity: .3;
         height: 100%;
         width: 100%;
         position: absolute;
@@ -533,23 +586,7 @@ body {
     }
 
     @include desktop {
-        .navbar {
-            padding: 0 9rem;
-
-            &__anchor {
-                margin-left: 2.8rem;
-                width: 5rem;
-
-                &:hover {
-                    font-size: 1rem;
-                    transition: 0.3s;
-                    font-family: 'Avenir-Bold';
-                    color: #FFFFFF;
-                    border-bottom: 0.25rem solid white;
-
-                }
-            }
-
+        
             .footer {
 
                 &__container-deets {
@@ -577,4 +614,3 @@ body {
 
         }
     }    
-}
