@@ -656,6 +656,13 @@ body {
   margin-top: 0 auto;
 }
 
+@media (min-width: 768px) {
+  .footer__contact-name-style {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
 .footer__contact-details {
   font-size: 0.83rem;
   color: #FAFAFA;
@@ -664,6 +671,13 @@ body {
   font-weight: 100;
   font-size: .79rem;
   margin: auto 0;
+}
+
+@media (min-width: 768px) {
+  .footer__contact-details {
+    font-size: .8rem;
+    font-weight: 500;
+  }
 }
 
 .footer__contact-copyright {

@@ -567,6 +567,11 @@ body {
 
     &__contact-name-style {
         margin-top: 0 auto;
+
+        @include tablet {
+            font-size: 1rem;
+            font-weight: bold;
+        }
     }
 
     &__contact-details {
@@ -574,6 +579,11 @@ body {
         font-weight: 100;
         font-size: .79rem;
         margin: auto 0;
+
+        @include tablet {
+            font-size: .8rem;
+            font-weight: 500;
+        }
     }
 
     &__contact-copyright {

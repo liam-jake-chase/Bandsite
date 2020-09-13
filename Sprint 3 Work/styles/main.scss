@@ -243,6 +243,16 @@ body {
         }
     }
 
+    @include tablet {
+        &__paragraph-column {
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            width: 95%;
+
+        }
+    }
+
     &__paragraph-title {
         font-family: "Avenir-Bold";
         font-size: 1rem;
@@ -292,6 +302,22 @@ body {
     background-color: $second-color;
     padding-bottom: 2.5rem;
 
+    @include tablet {
+        &__container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 1rem;               
+            margin: auto;
+
+            
+
+            @include desktop {
+                padding: 0 11.25rem;
+                margin: 0 auto;
+            }
+        }
+    }
+
     @include desktop {
         flex-direction: column;
         flex-wrap: wrap;
@@ -310,7 +336,7 @@ body {
         }
 
         @include desktop {
-            padding-left: 3rem;
+            padding-left: 12rem;
         }
 
     }
@@ -343,7 +369,12 @@ body {
         
 
         @include tablet {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
+            padding-left: 2rem;
+        }
+
+        @include desktop {
+            padding-left: 12rem;
         }
     }
 
@@ -699,14 +730,28 @@ body {
 
     &__contact-name-style {
         margin-top: 0 auto;
-    }
+        
+        @include tablet {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    
+    }   
+        
+
 
     &__contact-details {
         @include footertext-mobile;
         font-weight: 100;
         font-size: .79rem;
         margin: auto 0;
+
+        @include tablet {
+            font-size: .8rem;
+            font-weight: 500;
+        }
     }
+
 
     &__contact-copyright {
         padding-top: 1rem;
@@ -726,55 +771,5 @@ body {
             display: initial;
             padding: 1rem 0 2rem 1rem;
         }
-    }
-}
-
-@include tablet {
-
-    .about {
-
-        &__paragraph-column {
-            display: flex;
-            flex-direction: row;
-            margin: 0;
-            width: 95%;
-
-        }
-
-
-    }
-
-    .photo {
-
-        &__container {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 0 1rem;
-            
-
-            @include tablet {
-                
-                margin: auto;
-
-            }
-
-            @include desktop {
-                padding: 0 11.25rem;
-                margin: 0 auto;
-            }
-        }
-
-        @include desktop {
-            &__header {
-                padding-left: 2rem;
-
-            }
-
-
-
-        }
-
-       
-
     }
 }
