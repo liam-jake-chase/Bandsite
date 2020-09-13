@@ -28,11 +28,11 @@ body {
     }
 
     a:visited {
-        color: $third-color;
+        color: inherit;
     }
 
     a:link {
-        color: $third-color;
+        color: $second-color;
     }
     
 
@@ -133,7 +133,7 @@ body {
 
     &__opacity {
         background-color: $third-color;
-        opacity: .2;
+        opacity: .3;
         height: 100%;
         width: 100%;
         position: absolute;
@@ -164,6 +164,8 @@ body {
 
 .about {
     @include display-mobile;
+
+    padding-bottom: 2.5rem;
 
     @include desktop {
         padding: 0 10rem;
@@ -245,6 +247,7 @@ body {
         font-family: "Avenir-Bold";
         font-size: 1rem;
         padding: 0 1.2rem;
+        margin-bottom: 0;
 
         @include tablet {
 
@@ -256,7 +259,7 @@ body {
     &__paragraph-main {
         margin: 0 auto;
         font-size: 0.75rem;
-        padding: 1rem 1rem;
+        padding: 1rem 1rem 0 1rem;
         line-height: 1.15rem;
         width: 88%;
 
@@ -331,20 +334,12 @@ body {
 
 .comments {
     @include display-mobile;
-
-    // @include tablet {
-    //     &__container-large {
-    //        width: 33rem; 
-    //        position: relative;
-    //        margin-left: auto;
-    //        margin-right: auto;
-
-    //     }
-    // }
+    
 
     &__header {
         @include header-mobile;
         padding-left: 1rem;
+        margin-top: 1rem;
         
 
         @include tablet {
@@ -674,12 +669,7 @@ body {
             width: 1rem;
         }
 
-    //     @include desktop {
-    //         margin-right: auto;
-    //         padding-left: 3rem;
-    //     }
-
-
+    
     }
 
     &__logo {
@@ -699,12 +689,7 @@ body {
             
         }
 
-    //     @include desktop {
-    //         display: flex;
-    //         flex-direction: flex-end;
-    //         margin-left: 0;
-    //     }
-
+   
     }
 
     &__contact-name {

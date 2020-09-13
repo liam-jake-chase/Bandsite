@@ -44,11 +44,11 @@ body {
 }
 
 .navbar a:visited {
-  color: #AFAFAF;
+  color: inherit;
 }
 
 .navbar a:link {
-  color: #AFAFAF;
+  color: #FAFAFA;
 }
 
 @media (min-width: 768px) {
@@ -169,7 +169,7 @@ body {
 
 .hero__opacity {
   background-color: #AFAFAF;
-  opacity: .2;
+  opacity: .3;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -207,6 +207,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-bottom: 2.5rem;
 }
 
 @media (min-width: 1200px) {
@@ -245,7 +246,7 @@ body {
 }
 
 .about__musicians {
-  width: 90%;
+  width: 18rem;
   margin: auto;
   height: 8.99rem;
   -o-object-fit: cover;
@@ -301,6 +302,7 @@ body {
   font-family: "Avenir-Bold";
   font-size: 1rem;
   padding: 0 1.2rem;
+  margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
@@ -313,7 +315,7 @@ body {
 .about__paragraph-main {
   margin: 0 auto;
   font-size: 0.75rem;
-  padding: 1rem 1rem;
+  padding: 1rem 1rem 0 1rem;
   line-height: 1.15rem;
   width: 88%;
 }
@@ -423,6 +425,7 @@ body {
   font-family: "Avenir-Bold";
   font-size: 1.5rem;
   padding-left: 1rem;
+  margin-top: 1rem;
 }
 
 @media (min-width: 768px) {
