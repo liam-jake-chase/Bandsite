@@ -601,7 +601,7 @@ body {
         display: flex;
         padding: 1.44rem .5rem;
         justify-content: space-around;
-        width: 40%;
+        width: 8.25rem;
     }
 
     &__icons {
@@ -624,8 +624,8 @@ body {
 
     }
 
-    // &__logo {
-    //     display: none;
+    &__logo {
+        display: none;
 
     //     @include tablet {
     //         display: flex;
@@ -639,7 +639,7 @@ body {
     //         margin-left: 0;
     //     }
 
-    // }
+    }
 
     &__contact-name {
         @include footertext-mobile;
@@ -657,9 +657,9 @@ body {
         margin: auto 0;
     }
 
-    // &__contact-copyright {
-    //     padding-top: 1rem;
-    //     padding-bottom: 2rem;
+    &__contact-copyright {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
 
     //     @include tablet {
     //         flex-wrap: wrap;
@@ -670,7 +670,7 @@ body {
 
 
     //     }
-    // }
+    }
 }
 
 @include tablet {
