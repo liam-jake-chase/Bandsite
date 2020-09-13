@@ -587,6 +587,28 @@ body {
     //     padding: 0.775rem 9rem 2.4rem 9rem;
     // }
 
+    @include tablet {
+        
+
+        &__container {
+            display: inline-flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        &__container-deets {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 0;
+            padding-right: 3rem;
+        }
+
+        &__container-words {
+            margin: auto 0;
+        }
+    }
+
     &__header {
         @include header-mobile;
         color: $text-color;
@@ -602,19 +624,24 @@ body {
         padding: 1.44rem .5rem;
         justify-content: space-around;
         width: 8.25rem;
+
+        @include tablet {
+            flex-direction: row;
+            padding-left: 3rem;
+        }
     }
 
     &__icons {
         height: 1.5rem;
         width: 1.5rem;
 
-    //     @include tablet {
-    //         height: 2rem;
-    //         width: 2rem;
-    //         padding-top: 2rem;
-    //         height: 1rem;
-    //         width: 1rem;
-    //     }
+        @include tablet {
+            height: 3rem;
+            width: 3rem;
+            padding: 2.5rem 0 0 2rem;
+            height: 1rem;
+            width: 1rem;
+        }
 
     //     @include desktop {
     //         margin-right: auto;
@@ -627,11 +654,14 @@ body {
     &__logo {
         display: none;
 
-    //     @include tablet {
-    //         display: flex;
-    //         justify-items: flex-end;
+        @include tablet {
+            display: initial;
+            position: absolute;
+            right: 2.5rem;
+            padding-top: 2.5rem;
+            
 
-    //     }
+        }
 
     //     @include desktop {
     //         display: flex;
@@ -647,7 +677,7 @@ body {
     }
 
     &__contact-name-style {
-        margin-top: 0.1rem;
+        margin-top: 0 auto;
     }
 
     &__contact-details {
@@ -661,15 +691,20 @@ body {
         padding-top: 1rem;
         padding-bottom: 2rem;
 
-    //     @include tablet {
-    //         flex-wrap: wrap;
-    //         padding: 5rem;
-    //         margin: 0 auto;
-    //         width: 40%;
+        @include tablet {
+            display: none;
+        }
 
+    
+    }
 
+    &__contact-copyright-large {
+        display: none;
 
-    //     }
+        @include tablet {
+            display: initial;
+            padding: 1rem 0 2rem 1rem;
+        }
     }
 }
 
