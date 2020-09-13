@@ -313,7 +313,7 @@ body {
     }
 
     &__image {
-        width: 90%;
+        width: 18.2rem;
         margin: 0 auto;
         height: 10.35rem;
         object-fit: cover;
@@ -334,8 +334,12 @@ body {
 
     &__header {
         @include header-mobile;
-        padding-left: 3rem;
-        font-size: 2.5rem;
+        padding-left: 1rem;
+        
+
+        @include tablet {
+            font-size: 2.5rem;
+        }
     }
 
     &__container {
@@ -343,11 +347,13 @@ body {
         padding-bottom: 1rem;
         border-bottom: solid $third-color 2px;
         margin: 0 1rem;
+        width: 18rem;
 
         @include tablet {
             width: 36rem;
             margin: 0 6rem;
             flex-direction: column;
+            
 
         }
 
@@ -376,6 +382,8 @@ body {
             width: 36rem;
             margin: 0 auto;
             padding-bottom: 3rem;
+            position: relative;
+           
 
         }
     }
@@ -518,9 +526,9 @@ body {
         font-size: .8rem;
 
         @include tablet {
-            margin: 0 auto;
+            margin: 0 1rem;
             width: 8rem;
-        }
+        }   
 
     }
 
@@ -531,12 +539,16 @@ body {
         width: 5.5rem;
         margin: .5rem auto;
         margin-right: 0;
+        position: absolute;
+        left: 14rem;
 
         @include tablet {
 
             margin-right: 23rem;
             font-size: .8rem;
             width: 2rem;
+            left: 14rem;
+            
         }
 
     }
@@ -555,6 +567,13 @@ body {
     &__text-wrapper {
         border-bottom: solid $third-color 2px;
         padding-bottom: .8rem;
+        width: 18rem;
+
+        @include tablet {
+            width: 36rem;
+        }
+
+        
 
     }
 }
@@ -564,9 +583,9 @@ body {
     @include display-mobile;
     background-color: $main-color;
 
-    @include desktop {
-        padding: 0.775rem 9rem 2.4rem 9rem;
-    }
+    // @include desktop {
+    //     padding: 0.775rem 9rem 2.4rem 9rem;
+    // }
 
     &__header {
         @include header-mobile;
@@ -589,38 +608,38 @@ body {
         height: 1.5rem;
         width: 1.5rem;
 
-        @include tablet {
-            height: 2rem;
-            width: 2rem;
-            padding-top: 2rem;
-            height: 1rem;
-            width: 1rem;
-        }
+    //     @include tablet {
+    //         height: 2rem;
+    //         width: 2rem;
+    //         padding-top: 2rem;
+    //         height: 1rem;
+    //         width: 1rem;
+    //     }
 
-        @include desktop {
-            margin-right: auto;
-            padding-left: 3rem;
-        }
+    //     @include desktop {
+    //         margin-right: auto;
+    //         padding-left: 3rem;
+    //     }
 
-
-    }
-
-    &__logo {
-        display: none;
-
-        @include tablet {
-            display: flex;
-            justify-items: flex-end;
-
-        }
-
-        @include desktop {
-            display: flex;
-            flex-direction: flex-end;
-            margin-left: 0;
-        }
 
     }
+
+    // &__logo {
+    //     display: none;
+
+    //     @include tablet {
+    //         display: flex;
+    //         justify-items: flex-end;
+
+    //     }
+
+    //     @include desktop {
+    //         display: flex;
+    //         flex-direction: flex-end;
+    //         margin-left: 0;
+    //     }
+
+    // }
 
     &__contact-name {
         @include footertext-mobile;
@@ -638,20 +657,20 @@ body {
         margin: auto 0;
     }
 
-    &__contact-copyright {
-        padding-top: 1rem;
-        padding-bottom: 2rem;
+    // &__contact-copyright {
+    //     padding-top: 1rem;
+    //     padding-bottom: 2rem;
 
-        @include tablet {
-            flex-wrap: wrap;
-            padding: 5rem;
-            margin: 0 auto;
-            width: 40%;
+    //     @include tablet {
+    //         flex-wrap: wrap;
+    //         padding: 5rem;
+    //         margin: 0 auto;
+    //         width: 40%;
 
 
 
-        }
-    }
+    //     }
+    // }
 }
 
 @include tablet {
@@ -675,10 +694,12 @@ body {
             display: flex;
             flex-wrap: wrap;
             padding: 0 1rem;
+            
 
             @include tablet {
-                padding-left: 5rem;
+                
                 margin: auto;
+
             }
 
             @include desktop {
@@ -697,35 +718,7 @@ body {
 
         }
 
-        .footer {
-
-            &__container {
-                display: flex;
-                justify-content: space-evenly;
-                flex-direction: row;
-                width: 80%;
-
-            }
-
-
-            &__container-deets {
-                display: flex;
-                justify-content: space-around;
-                margin-top: 2rem;
-                padding: 0 2rem;
-
-                @include desktop {
-                    display: flex;
-                    justify-content: space-between;
-                }
-
-
-            }
-
-
-
-
-        }
+       
 
     }
 }

@@ -41,6 +41,8 @@
  
  function displayComment(listArray) {
     let commentsContainer = document.querySelector(".comments__posted-list");
+    
+        commentsContainer.innerHTML="";
 
      listArray.forEach(listArray => {
 

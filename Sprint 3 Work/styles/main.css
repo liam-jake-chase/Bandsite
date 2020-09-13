@@ -47,6 +47,10 @@ body {
   color: #AFAFAF;
 }
 
+.navbar a:link {
+  color: #AFAFAF;
+}
+
 @media (min-width: 768px) {
   .navbar {
     display: -webkit-box;
@@ -388,7 +392,7 @@ body {
 }
 
 .photo__image {
-  width: 90%;
+  width: 18.2rem;
   margin: 0 auto;
   height: 10.35rem;
   -o-object-fit: cover;
@@ -418,8 +422,13 @@ body {
   padding: .3rem 1rem 0;
   font-family: "Avenir-Bold";
   font-size: 1.5rem;
-  padding-left: 3rem;
-  font-size: 2.5rem;
+  padding-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .comments__header {
+    font-size: 2.5rem;
+  }
 }
 
 .comments__container {
@@ -429,6 +438,7 @@ body {
   padding-bottom: 1rem;
   border-bottom: solid #AFAFAF 2px;
   margin: 0 1rem;
+  width: 18rem;
 }
 
 @media (min-width: 768px) {
@@ -474,6 +484,7 @@ body {
     width: 36rem;
     margin: 0 auto;
     padding-bottom: 3rem;
+    position: relative;
   }
 }
 
@@ -635,7 +646,7 @@ body {
 
 @media (min-width: 768px) {
   .comments__name {
-    margin: 0 auto;
+    margin: 0 1rem;
     width: 8rem;
   }
 }
@@ -646,6 +657,8 @@ body {
   width: 5.5rem;
   margin: .5rem auto;
   margin-right: 0;
+  position: absolute;
+  left: 14rem;
 }
 
 @media (min-width: 768px) {
@@ -653,6 +666,7 @@ body {
     margin-right: 23rem;
     font-size: .8rem;
     width: 2rem;
+    left: 14rem;
   }
 }
 
@@ -671,6 +685,13 @@ body {
 .comments__text-wrapper {
   border-bottom: solid #AFAFAF 2px;
   padding-bottom: .8rem;
+  width: 18rem;
+}
+
+@media (min-width: 768px) {
+  .comments__text-wrapper {
+    width: 36rem;
+  }
 }
 
 .footer {
@@ -682,12 +703,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #323232;
-}
-
-@media (min-width: 1200px) {
-  .footer {
-    padding: 0.775rem 9rem 2.4rem 9rem;
-  }
 }
 
 .footer__header {
@@ -717,49 +732,6 @@ body {
   width: 1.5rem;
 }
 
-@media (min-width: 768px) {
-  .footer__icons {
-    height: 2rem;
-    width: 2rem;
-    padding-top: 2rem;
-    height: 1rem;
-    width: 1rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .footer__icons {
-    margin-right: auto;
-    padding-left: 3rem;
-  }
-}
-
-.footer__logo {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .footer__logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    justify-items: flex-end;
-  }
-}
-
-@media (min-width: 1200px) {
-  .footer__logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: flex-end;
-            flex-direction: flex-end;
-    margin-left: 0;
-  }
-}
-
 .footer__contact-name {
   font-size: 0.83rem;
   color: #FAFAFA;
@@ -779,21 +751,6 @@ body {
   font-weight: 100;
   font-size: .79rem;
   margin: auto 0;
-}
-
-.footer__contact-copyright {
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-}
-
-@media (min-width: 768px) {
-  .footer__contact-copyright {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    padding: 5rem;
-    margin: 0 auto;
-    width: 40%;
-  }
 }
 
 @media (min-width: 768px) {
@@ -820,7 +777,6 @@ body {
 
 @media (min-width: 768px) and (min-width: 768px) {
   .photo__container {
-    padding-left: 5rem;
     margin: auto;
   }
 }
@@ -835,42 +791,6 @@ body {
 @media (min-width: 768px) and (min-width: 1200px) {
   .photo__header {
     padding-left: 2rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .photo .footer__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 80%;
-  }
-  .photo .footer__container-deets {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    margin-top: 2rem;
-    padding: 0 2rem;
-  }
-}
-
-@media (min-width: 768px) and (min-width: 1200px) {
-  .photo .footer__container-deets {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
 }
 /*# sourceMappingURL=main.css.map */
