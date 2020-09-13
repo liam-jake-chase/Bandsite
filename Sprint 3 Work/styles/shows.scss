@@ -2,7 +2,8 @@
 @import "../partials/variables";
 @import "../partials/mixins";
 
-html, body {
+html,
+body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -14,41 +15,41 @@ html, body {
 
 .navbar {
     height: 5rem;
-    background-color:$main-color;
+    background-color: $main-color;
     color: $second-color;
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 
     @include tablet {
         flex-wrap: nowrap;
         justify-content: flex-start;
         padding: 0 1.5rem;
     }
-      
-    &__link {
-     text-decoration: none;
-     display: flex;
-     justify-content: space-around;
-     align-items: center;
-     width: 50%;
-     font-size: .9rem;
-     padding-bottom:.5rem;
-     border-bottom: solid 0.25rem transparent;
-     color: $third-color;
 
-     @include tablet {
-         width: 12%;
-         margin: 0 1.5rem;
-         padding-top: 1.5rem;
-     }
-    } 
-      
-    &__link-view {
-        border-bottom: solid 0.25rem white; 
-        color: $second-color;  
+    &__link {
+        text-decoration: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+        font-size: .9rem;
+        padding-bottom: .5rem;
+        border-bottom: solid 0.25rem transparent;
+        color: $third-color;
+
+        @include tablet {
+            width: 12%;
+            margin: 0 1.5rem;
+            padding-top: 1.5rem;
+        }
     }
-    
-    
+
+    &__link-view {
+        border-bottom: solid 0.25rem white;
+        color: $second-color;
+    }
+
+
 
     &__logo {
         display: flex;
@@ -56,7 +57,7 @@ html, body {
         width: 100%;
         margin: 1rem auto;
         height: 1.20rem;
-        
+
         @include tablet {
             width: auto;
             margin: 0;
@@ -68,7 +69,7 @@ html, body {
 }
 
 .hero {
-    display: flex;    
+    display: flex;
     flex-direction: column;
     background-image: url("../assets/Images/IMG_139887.jpg");
     background-size: cover;
@@ -95,7 +96,7 @@ html, body {
         height: 100%;
         width: 100%;
         position: absolute;
-        left:0;
+        left: 0;
     }
 
     &__album {
@@ -114,31 +115,32 @@ html, body {
 
         }
     }
-    
+
     &__title {
-     color: $text-color;
-     align-items: center;
-     line-height: 3.23rem;
-     font-size: 2.32rem;
-     font-weight: 700;
-     width: 100%;
-     font-family: "Avenir-Bold";
-     margin-top: 0;
+        color: $text-color;
+        align-items: center;
+        line-height: 3.23rem;
+        font-size: 2.32rem;
+        font-weight: 700;
+        width: 100%;
+        font-family: "Avenir-Bold";
+        margin-top: 0;
 
-     @include tablet {
-        line-height: 5.25rem;
-        font-size: 3.75rem;
-        width: 80%;
-     }
+        @include tablet {
+            line-height: 5.25rem;
+            font-size: 3.75rem;
+            width: 80%;
+        }
 
-     @include desktop {
-         width: 50%;
-         margin-left: 7rem;
-     }
-             
+        @include desktop {
+            width: 50%;
+            margin-left: 7rem;
+        }
+
     }
+
     &__soundcloud {
-        width:95%;
+        width: 95%;
         height: 6.1rem;
         margin-top: .5rem;
 
@@ -155,7 +157,9 @@ html, body {
     }
 
 
-}  .shows {
+}
+
+.shows {
     @include tablet {
         display: flex;
         flex-direction: column;
@@ -172,43 +176,43 @@ html, body {
             width: 50.25rem;
             padding-right: 5rem;
         }
-        
+
     }
 
     @include display-mobile;
 
 
-        &__header {
+    &__header {
         @include header-mobile;
         margin-bottom: .3rem;
         font-size: 2rem;
         font-weight: bolder;
-        
+
         @include desktop {
             padding-left: 7rem;
         }
 
 
-    }   
+    }
 
-    &__main-container {           
-        padding-left: 1rem; 
+    &__main-container {
+        padding-left: 1rem;
         padding-bottom: 1rem;
 
         @include tablet {
             display: none;
         }
-                           
+
     }
 
-        
+
     &__date-header {
         color: $third-color;
         margin-bottom: 0;
         height: 3rem;
-    }    
-    
-        
+    }
+
+
 
     &__date-text {
         color: black;
@@ -223,23 +227,23 @@ html, body {
             font-family: "Avenir";
             font-size: 1rem;
             font-weight: 900;
-             
+
         }
 
         @include desktop {
             margin-left: 0;
             padding-left: 0;
         }
-        
+
 
     }
-    
 
-    
+
+
     &__venue-header {
         color: $third-color;
-        margin: 1.5rem 0; 
-        height: .5rem;  
+        margin: 1.5rem 0;
+        height: .5rem;
     }
 
     &__venue-text {
@@ -248,19 +252,19 @@ html, body {
         height: .5rem;
 
         @include tablet {
-           width: 9rem;  
-           margin: auto 0;
-           
+            width: 9rem;
+            margin: auto 0;
+
         }
-               
+
     }
 
     &__location-header {
         color: $third-color;
-        margin: 1.5rem 0; 
-        height: .5rem; 
+        margin: 1.5rem 0;
+        height: .5rem;
 
-        
+
     }
 
     &__location-text {
@@ -271,11 +275,11 @@ html, body {
         @include tablet {
             width: 12.5rem;
             margin: 2.3rem 0;
-            
-            
-            
+
+
+
         }
-               
+
     }
 
     &__button {
@@ -292,12 +296,12 @@ html, body {
         @include tablet {
             width: 10.5rem;
             margin: 1rem 0;
-        }   
-        
+        }
+
         @include desktop {
             margin-right: 0;
         }
-        
+
     }
 
     &__breakline {
@@ -308,18 +312,18 @@ html, body {
         background-color: #E1E1E1;
         border-radius: .5rem;
 
-              
-        
+
+
     }
-    
+
     &__main-container-large {
         display: none;
 
-        @include tablet {            
+        @include tablet {
             display: flex;
             flex-direction: column;
-        }        
-       
+        }
+
     }
 
     &__header-container {
@@ -333,13 +337,13 @@ html, body {
     &__info-container {
         display: flex;
         flex-direction: row;
-        border-bottom: solid 2px #E1E1E1;        
+        border-bottom: solid 2px #E1E1E1;
         border-radius: .5rem;
         vertical-align: middle;
         height: 5rem;
 
         @include tablet {
-            
+
             border-radius: 0;
         }
 
@@ -348,45 +352,45 @@ html, body {
             border-radius: 0px;
         }
 
-        
+
     }
 
-   
+
 
     &__date-header-large {
         color: $third-color;
-         
-        width: 14.5rem;    
-         
+
+        width: 14.5rem;
+
 
         @include desktop {
             margin-left: 0;
             width: 14.1rem;
         }
-    
+
     }
 
-    
+
     &__venue-header-large {
-        color: $third-color;  
+        color: $third-color;
         width: 9rem;
 
         @include desktop {
             width: 8.8rem;
         }
-            
+
     }
 
     &__location-header-large {
-        color: $third-color; 
-          
+        color: $third-color;
+
     }
 
-    
+
 
 
 }
-    
+
 
 
 .footer {
@@ -412,14 +416,14 @@ html, body {
 
     &__icons {
         height: 1.5rem;
-        width: 1.5rem;   
-        
+        width: 1.5rem;
+
         @include tablet {
             padding-left: 2rem;
-            
+
         }
-        
-        
+
+
     }
 
     @include tablet {
@@ -435,13 +439,14 @@ html, body {
             display: initial;
             margin-right: 0;
         }
-        
+
     }
 
     &__contact-name {
         @include footertext-mobile;
-       
+
     }
+
     &__contact-name-style {
         margin-top: 0.1rem;
     }
@@ -454,7 +459,7 @@ html, body {
     }
 
     &__contact-copyright {
-        padding-top:1rem;
+        padding-top: 1rem;
         padding-bottom: 2rem;
     }
 }
@@ -467,102 +472,108 @@ html, body {
             display: flex;
             justify-content: space-evenly;
             flex-direction: row;
-                    
+
         }
-    
+
         &__icons {
             height: 2rem;
             width: 2rem;
-            
+
             padding-top: 2rem;
             height: 1rem;
             width: 1rem;
         }
-    
+
         .navbar__logo {
             display: flex;
             justify-items: flex-end;
-                   
+
         }
-    
+
         &__container {
             display: flex;
             flex-direction: row;
             width: 80%;
         }
-    
+
         &__logo {
             flex-direction: flex-end;
         }
-        
-    
+
+
         &__container-deets {
             display: flex;
             justify-content: space-around;
             margin-top: 2rem;
             padding: 0 2rem;
-            
-    
+
+
         }
-    
+
         &__contact-copyright {
             flex-wrap: wrap;
             padding: 5rem;
             margin: 0 auto;
             width: 40%;
-    
-            
-        
+
+
+
         }
-    
+
         .photo__container {
-            padding-left: 5rem;  
+            padding-left: 5rem;
             margin: auto;
-            
+
             &__header {
                 padding-left: 2rem;
-           
+
+            }
         }
     }
+
+    @include desktop {
+        .navbar {
+            padding: 0 9rem;
+
+            &__anchor {
+                margin-left: 2.8rem;
+                width: 5rem;
+
+                &:hover {
+                    font-size: 1rem;
+                    transition: 0.3s;
+                    font-family: 'Avenir-Bold';
+                    color: #FFFFFF;
+                    border-bottom: 0.25rem solid white;
+
+                }
+            }
+
+            .footer {
+
+                &__container-deets {
+                    display: flex;
+                }
+
+                padding: 0.775rem 9rem 2.4rem 9rem;
+
+                &__container-deets {
+                    justify-content: space-between;
+                }
+
+                &__icons {
+                    margin-right: auto;
+                    padding-left: 3rem;
+                }
+
+                .navbar__logo {
+                    display: flex;
+                    flex-direction: flex-end;
+                    margin-left: 0;
+                }
+
+            }
+
+        }
+    }    
 }
-
-@include desktop {
-    .navbar {
-        padding: 0 9rem;
-        &__anchor {
-          margin-left: 2.8rem;
-          width: 5rem;
-          &:hover {
-            font-size: 1rem;
-            transition: 0.3s;
-            font-family: 'Avenir-Bold';
-            color: #FFFFFF;
-            border-bottom: 0.25rem solid white;
-          
-        }
-      }
-      
-      .footer {
-
-        &__container-deets{
-            display: flex;
-        }
-
-        padding: 0.775rem 9rem 2.4rem 9rem;
-        &__container-deets {
-          justify-content: space-between;
-        }
-        &__icons {
-          margin-right: auto;
-          padding-left: 3rem;
-        }
-
-        .navbar__logo {
-            display: flex;
-            flex-direction: flex-end;
-            margin-left: 0;
-        }
-        
-    }
-
-}   } 
