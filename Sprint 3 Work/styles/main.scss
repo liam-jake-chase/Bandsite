@@ -583,9 +583,9 @@ body {
     @include display-mobile;
     background-color: $main-color;
 
-    // @include desktop {
-    //     padding: 0.775rem 9rem 2.4rem 9rem;
-    // }
+    @include desktop {
+        padding: 0.775rem 11.25rem 2.4rem 11.25rem;
+    }
 
     @include tablet {
         
@@ -595,6 +595,10 @@ body {
             flex-direction: row;
             width: 49rem;
             position: relative;
+
+            @include desktop {
+                width: 53rem;
+            }
         }
 
         &__container-deets {
@@ -665,6 +669,11 @@ body {
             padding-top: 2.5rem;
             
 
+        }
+
+        @include desktop {
+            right: 0rem;
+            
         }
 
     //     @include desktop {
