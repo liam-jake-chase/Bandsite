@@ -34,7 +34,7 @@ body {
     }
 
     a:link {
-        color: $third-color;
+        color: inherit;
     }
     
 
@@ -228,7 +228,7 @@ body {
 
         &__section-container {
             width: 50.25rem;
-            padding-right: 5rem;
+           
         }
 
     }
@@ -427,7 +427,7 @@ body {
 
         @include desktop {
             margin-left: 0;
-            width: 14.1rem;
+            width: 11.1rem;
         }
 
     }
@@ -442,7 +442,7 @@ body {
         }
 
         @include desktop {
-            width: 8.8rem;
+            width: 10.75rem;
         }
 
     }

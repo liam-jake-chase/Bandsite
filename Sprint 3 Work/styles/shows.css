@@ -48,7 +48,7 @@ body {
 }
 
 .navbar a:link {
-  color: #AFAFAF;
+  color: inherit;
 }
 
 @media (min-width: 768px) {
@@ -294,7 +294,6 @@ body {
   }
   .shows__section-container {
     width: 50.25rem;
-    padding-right: 5rem;
   }
 }
 
@@ -499,7 +498,7 @@ body {
 @media (min-width: 1200px) {
   .shows__date-header-large {
     margin-left: 0;
-    width: 14.1rem;
+    width: 11.1rem;
   }
 }
 
@@ -516,7 +515,7 @@ body {
 
 @media (min-width: 1200px) {
   .shows__venue-header-large {
-    width: 8.8rem;
+    width: 10.75rem;
   }
 }
 
