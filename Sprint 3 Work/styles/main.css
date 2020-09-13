@@ -714,7 +714,8 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 100%;
+    width: 49rem;
+    position: relative;
   }
   .footer__container-deets {
     display: -webkit-box;
@@ -729,6 +730,8 @@ body {
             justify-content: space-between;
     margin-left: 0;
     padding-right: 3rem;
+    width: 45rem;
+    position: relative;
   }
   .footer__container-words {
     margin: auto 0;

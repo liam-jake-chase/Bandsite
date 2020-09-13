@@ -593,7 +593,8 @@ body {
         &__container {
             display: inline-flex;
             flex-direction: row;
-            width: 100%;
+            width: 49rem;
+            position: relative;
         }
 
         &__container-deets {
@@ -602,6 +603,9 @@ body {
             justify-content: space-between;
             margin-left: 0;
             padding-right: 3rem;
+            width: 45rem;
+            position: relative;
+            
         }
 
         &__container-words {
