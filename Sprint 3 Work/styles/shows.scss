@@ -29,12 +29,12 @@ body {
     }
 
     a:visited {
-        color: $third-color;
+        color: inherit;
         
     }
 
     a:link {
-        color: inherit;
+        color: $second-color;
     }
     
 
@@ -141,7 +141,7 @@ body {
 
     &__soundcloud {
         z-index: 1;
-        width: 95%;
+        width: 18rem;
         height: 6.1rem;
         margin-top: .5rem;
 

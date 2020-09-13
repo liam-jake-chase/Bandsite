@@ -44,11 +44,11 @@ body {
 }
 
 .navbar a:visited {
-  color: #AFAFAF;
+  color: inherit;
 }
 
 .navbar a:link {
-  color: inherit;
+  color: #FAFAFA;
 }
 
 @media (min-width: 768px) {
@@ -175,7 +175,7 @@ body {
 
 .hero__soundcloud {
   z-index: 1;
-  width: 95%;
+  width: 18rem;
   height: 6.1rem;
   margin-top: .5rem;
 }
