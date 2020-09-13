@@ -340,7 +340,7 @@ body {
 
 @media (min-width: 768px) {
   .shows__date-text {
-    width: 14.5rem;
+    width: 11rem;
     margin: auto 0;
     font-family: "Avenir";
     font-size: 1rem;
@@ -369,7 +369,7 @@ body {
 
 @media (min-width: 768px) {
   .shows__venue-text {
-    width: 9rem;
+    width: 8rem;
     margin: auto 0;
   }
 }
@@ -389,7 +389,7 @@ body {
 @media (min-width: 768px) {
   .shows__location-text {
     width: 12.5rem;
-    margin: 2.3rem 0;
+    margin: 2.3rem 0 2.3rem 2.75rem;
   }
 }
 
@@ -440,6 +440,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45rem;
   }
 }
 
@@ -487,6 +490,12 @@ body {
   width: 14.5rem;
 }
 
+@media (min-width: 768px) {
+  .shows__date-header-large {
+    width: 11rem;
+  }
+}
+
 @media (min-width: 1200px) {
   .shows__date-header-large {
     margin-left: 0;
@@ -496,7 +505,13 @@ body {
 
 .shows__venue-header-large {
   color: #AFAFAF;
-  width: 9rem;
+  width: 11rem;
+}
+
+@media (min-width: 768px) {
+  .shows__venue-header-large {
+    width: 10.75rem;
+  }
 }
 
 @media (min-width: 1200px) {
