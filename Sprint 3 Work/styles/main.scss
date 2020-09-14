@@ -350,7 +350,7 @@ body {
         }
 
         @include desktop {
-            padding-left: 11.25rem;
+            padding-left: 12.2rem;
         }
 
     }
@@ -365,6 +365,11 @@ body {
             width: 30%;
             height: 28%;
             margin-left: 0;
+            
+        }
+
+        @include desktop {
+            margin-left: 1rem;
             
         }
 
@@ -388,7 +393,7 @@ body {
         }
 
         @include desktop {
-            padding-left: 11.25rem;
+            padding-left: 12.2rem;
         }
     }
 
