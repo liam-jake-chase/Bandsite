@@ -20,10 +20,9 @@
 
 
 @mixin photo-mobile {
-    width: 18rem;
-        margin: auto;
-        height: 8.99rem;
-        object-fit: cover;
+    width: 90%;  
+    height: 10rem;    
+    object-fit: cover;
 }
 
 @mixin header-mobile {

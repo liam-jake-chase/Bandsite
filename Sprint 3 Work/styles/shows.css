@@ -190,6 +190,7 @@ body {
   .hero__soundcloud {
     width: 23.25rem;
     height: 9.125rem;
+    margin-left: 1rem;
   }
 }
 
@@ -223,7 +224,8 @@ body {
 
 @media (min-width: 1200px) {
   .hero__album {
-    margin-left: 7rem;
+    margin-left: 9rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -250,8 +252,9 @@ body {
 
 @media (min-width: 1200px) {
   .hero__title {
-    width: 50%;
-    margin-left: 7rem;
+    width: 40%;
+    margin-left: 9rem;
+    font-size: 3rem;
   }
 }
 
@@ -550,7 +553,6 @@ body {
         -ms-flex-direction: row;
             flex-direction: row;
     width: 48rem;
-    position: relative;
   }
   .footer__container-deets {
     display: -webkit-box;
@@ -565,8 +567,7 @@ body {
             justify-content: space-between;
     margin-left: 0;
     padding-right: 3rem;
-    width: 45rem;
-    position: relative;
+    width: 90%;
   }
   .footer__container-words {
     margin: auto 0;
@@ -641,7 +642,7 @@ body {
 
 @media (min-width: 1200px) {
   .footer__logo {
-    right: 0rem;
+    right: 11rem;
   }
 }
 

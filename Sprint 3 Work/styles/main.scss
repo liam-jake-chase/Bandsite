@@ -176,11 +176,11 @@ body {
         }
 
 
-        &__image {
-            width: 56rem;
-            height: 28.125rem;
-            margin: 0 auto;
-        }
+        // &__image {
+        //     width: 56rem;
+        //     height: 28.125rem;
+        //     margin: 0 auto;
+        // }
     }
 
     &__header {
@@ -202,11 +202,21 @@ body {
 
     &__musicians {
         @include photo-mobile;
+        
+        margin: 0 auto;
 
         @include tablet {
-            width: 45rem;
+            width: 90%;
             height: 22.625rem;
         }
+
+        @include desktop {
+            width: 51.5rem;
+            height: 28.125
+
+        }
+
+
     }
 
     &__subheader {
@@ -302,21 +312,25 @@ body {
     background-color: $second-color;
     padding-bottom: 2.5rem;
 
-    @include tablet {
+    
         &__container {
+            margin-right: 0;
+            padding-left: 1rem;
+            
+            
+            @include tablet {
             display: flex;
             flex-wrap: wrap;
-            padding: 0 1rem;               
-            margin: auto;
-
-            
+            padding-left: 2rem;               
+            margin: auto; 
+            }           
 
             @include desktop {
                 padding: 0 11.25rem;
                 margin: 0 auto;
             }
         }
-    }
+    
 
     @include desktop {
         flex-direction: column;
@@ -336,22 +350,22 @@ body {
         }
 
         @include desktop {
-            padding-left: 12rem;
+            padding-left: 11.25rem;
         }
 
     }
 
     &__image {
-        width: 18.2rem;
-        margin: 0 auto;
-        height: 10.35rem;
-        object-fit: cover;
-        padding: .5rem 0 0 1rem;
+        width: 95%;
+        margin: 0 auto; 
+        
+        padding: .5rem 0 0 0;
 
         @include tablet {
             width: 30%;
             height: 28%;
             margin-left: 0;
+            
         }
 
     }
@@ -374,7 +388,7 @@ body {
         }
 
         @include desktop {
-            padding-left: 12rem;
+            padding-left: 11.25rem;
         }
     }
 
@@ -637,7 +651,7 @@ body {
             display: inline-flex;
             flex-direction: row;
             width: 48rem;
-            position: relative;
+            
 
             
         }
@@ -648,8 +662,8 @@ body {
             justify-content: space-between;
             margin-left: 0;
             padding-right: 3rem;
-            width: 45rem;
-            position: relative;
+            width: 90%;
+            
             
         }
 
@@ -716,7 +730,7 @@ body {
         }
 
         @include desktop {
-            right: 0rem;
+            right: 11rem;
             
         }
 

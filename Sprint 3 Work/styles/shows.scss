@@ -152,6 +152,7 @@ body {
         @include desktop {
             width: 23.25rem;
             height: 9.125rem;
+            margin-left: 1rem;
         }
 
 
@@ -183,7 +184,8 @@ body {
         }
 
         @include desktop {
-            margin-left: 7rem;
+            margin-left: 9rem;
+            font-size: 1.25rem;
 
         }
     }
@@ -205,8 +207,9 @@ body {
         }
 
         @include desktop {
-            width: 50%;
-            margin-left: 7rem;
+            width: 40%;
+            margin-left: 9rem;
+            font-size: 3rem;
         }
 
     }
@@ -474,7 +477,7 @@ body {
             display: inline-flex;
             flex-direction: row;
             width: 48rem;
-            position: relative;
+           
 
             
         }
@@ -485,8 +488,8 @@ body {
             justify-content: space-between;
             margin-left: 0;
             padding-right: 3rem;
-            width: 45rem;
-            position: relative;
+            width: 90%;
+            
             
         }
 
@@ -553,7 +556,7 @@ body {
         }
 
         @include desktop {
-            right: 0rem;
+            right: 11rem;
             
         }
 

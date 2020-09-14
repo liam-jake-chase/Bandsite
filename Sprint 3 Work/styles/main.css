@@ -218,11 +218,6 @@ body {
   .about__container {
     padding: 0 6.1rem;
   }
-  .about__image {
-    width: 56rem;
-    height: 28.125rem;
-    margin: 0 auto;
-  }
 }
 
 .about__header {
@@ -246,17 +241,24 @@ body {
 }
 
 .about__musicians {
-  width: 18rem;
-  margin: auto;
-  height: 8.99rem;
+  width: 90%;
+  height: 10rem;
   -o-object-fit: cover;
      object-fit: cover;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
   .about__musicians {
-    width: 45rem;
+    width: 90%;
     height: 22.625rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about__musicians {
+    width: 51.5rem;
+    height: 28.125;
   }
 }
 
@@ -373,6 +375,11 @@ body {
   padding-bottom: 2.5rem;
 }
 
+.photo__container {
+  margin-right: 0;
+  padding-left: 1rem;
+}
+
 @media (min-width: 768px) {
   .photo__container {
     display: -webkit-box;
@@ -380,12 +387,12 @@ body {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding: 0 1rem;
+    padding-left: 2rem;
     margin: auto;
   }
 }
 
-@media (min-width: 768px) and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .photo__container {
     padding: 0 11.25rem;
     margin: 0 auto;
@@ -422,17 +429,14 @@ body {
 
 @media (min-width: 1200px) {
   .photo__header {
-    padding-left: 12rem;
+    padding-left: 11.25rem;
   }
 }
 
 .photo__image {
-  width: 18.2rem;
+  width: 95%;
   margin: 0 auto;
-  height: 10.35rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  padding: .5rem 0 0 1rem;
+  padding: .5rem 0 0 0;
 }
 
 @media (min-width: 768px) {
@@ -470,7 +474,7 @@ body {
 
 @media (min-width: 1200px) {
   .comments__header {
-    padding-left: 12rem;
+    padding-left: 11.25rem;
   }
 }
 
@@ -771,7 +775,6 @@ body {
         -ms-flex-direction: row;
             flex-direction: row;
     width: 48rem;
-    position: relative;
   }
   .footer__container-deets {
     display: -webkit-box;
@@ -786,8 +789,7 @@ body {
             justify-content: space-between;
     margin-left: 0;
     padding-right: 3rem;
-    width: 45rem;
-    position: relative;
+    width: 90%;
   }
   .footer__container-words {
     margin: auto 0;
@@ -862,7 +864,7 @@ body {
 
 @media (min-width: 1200px) {
   .footer__logo {
-    right: 0rem;
+    right: 11rem;
   }
 }
 
