@@ -354,10 +354,12 @@ body {
         @include tablet {
             width: 10.5rem;
             margin: 1rem 0;
+            margin-left: .5rem; 
         }
 
         @include desktop {
             margin-right: 0;
+            margin-left: .5rem;
         }
 
     }

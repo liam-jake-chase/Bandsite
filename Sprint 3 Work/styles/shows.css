@@ -411,12 +411,14 @@ body {
   .shows__button {
     width: 10.5rem;
     margin: 1rem 0;
+    margin-left: .5rem;
   }
 }
 
 @media (min-width: 1200px) {
   .shows__button {
     margin-right: 0;
+    margin-left: .5rem;
   }
 }
 
