@@ -49,14 +49,6 @@
          commentsContainer.appendChild(commentsSection);
          commentsSection.className = "comments__section";
 
-         let circleSection = document.createElement("div");
-         commentsSection.appendChild(circleSection);
-         circleSection.className = "comments__circle-section";
-
-         let nameSection = document.createElement("div");
-         commentsSection.appendChild(nameSection);
-         nameSection.className = "comments__name-section";
-
          let circle = document.createElement("div");
          commentsSection.appendChild(circle);
          circle.className = "comments__circle";
