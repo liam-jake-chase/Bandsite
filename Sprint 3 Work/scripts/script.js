@@ -1,8 +1,8 @@
  // API Key and URL variable
 
- const APIkey = "2ba0a00c-8dbc-4e0f-a231-e06793c9594d";
- const APIurl = "https://project-1-api.herokuapp.com/comments?api_key=";
-
+ const apiKey = "2ba0a00c-8dbc-4e0f-a231-e06793c9594d";
+ const apiURL = "https://project-1-api.herokuapp.com/comments?api_key=";
+ 
 
  // Insert comment function
  const form = document.querySelector(".comments__form");
@@ -11,7 +11,7 @@
      event.preventDefault();
 
      axios
-         .post(APIurl + APIkey, {
+         .post(apiURL + apiKey, {
             name: event.target.name.value,
             comment: event.target.comment.value
          })
@@ -24,10 +24,10 @@
 // Get comment function
  let getResponse = () => {
      axios
-         .get(APIurl + APIkey)
+         .get(apiURL + apiKey)
          .then(response => {
              console.log(response)
-             displayComment(response.data.sort(function (a, b) {
+             displayComment(response.data.sort((a, b) => {
                  return b.timestamp - a.timestamp
              })
             )
@@ -36,7 +36,6 @@
  };
  getResponse();
 
- 
 
  
  function displayComment(listArray) {
@@ -86,9 +85,26 @@
          textSection.appendChild(comments);
          comments.innerHTML = listArray.comment;
          comments.className = " comments__text-comment";
+
+         let deleteButton = document.createElement("button");
+         textSection.appendChild(deleteButton);
+         deleteButton.innerHTML = "REMOVE"
+         deleteButton.className = " comments__delete-button";
+         deleteButton.id = listArray.id;         
+         deleteButton.addEventListener("click", (event) => {
+            let idNumber = event.target.id;
+            deleteComment(idNumber);
+         });
+
      })
  }
 
-
+ let deleteComment = (id) => {
+    axios
+       .delete("https://project-1-api.herokuapp.com/comments/" + id + "?api_key=" + apiKey)
+       .then(() => {
+           getResponse();
+       })
+}
 
 

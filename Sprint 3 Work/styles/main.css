@@ -690,6 +690,26 @@ body {
   }
 }
 
+.comments__delete-button {
+  padding: .89rem 1.7rem;
+  border-radius: .25rem;
+  background-color: #323232;
+  color: #FAFAFA;
+  font-weight: 100;
+  font-family: "Avenir-Demi";
+  border-style: solid;
+  border: .3rem;
+  position: relative;
+  left: 11rem;
+}
+
+@media (min-width: 768px) {
+  .comments__delete-button {
+    position: relative;
+    left: 29rem;
+  }
+}
+
 .comments__circle {
   background-color: #AFAFAF;
   border-radius: 50%;

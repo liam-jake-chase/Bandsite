@@ -572,6 +572,26 @@ body {
 
     }
 
+    &__delete-button {
+        padding: .89rem 1.7rem;
+        border-radius: .25rem;
+        background-color: $main-color;
+        color: $second-color;
+        font-weight: 100;
+        font-family: "Avenir-Demi";
+        border-style: solid;
+        border: .3rem;
+        // margin: 1rem 0 0 11rem;
+        position: relative;
+        left: 11rem;
+
+        @include tablet {
+            position: relative;
+            left: 29rem;
+        }
+
+    }
+
     &__circle {
         background-color: $third-color;
         border-radius: 50%;
