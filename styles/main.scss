@@ -1,0 +1,813 @@
+@import "./partials/fonts";
+@import "./partials/variables";
+@import "./partials/mixins";
+
+html,
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Avenir"
+}
+
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar {
+    height: 5rem;
+    background-color: $main-color;
+    color: $second-color;
+
+    &__link-anchor {
+        text-decoration: none;
+
+    }
+
+    a:visited {
+        color: inherit;
+    }
+
+    a:link {
+        color: $second-color;
+    }
+    
+
+
+    @include tablet {
+
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding: 0 1.5rem;
+    }
+
+    @include desktop {
+        padding: 0 9rem;
+    }
+
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 0;
+        list-style: none;
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+
+    &__link {
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+        font-size: .9rem;
+        padding-bottom: .5rem;
+        border-bottom: solid 0.25rem transparent;
+        color: $third-color;
+
+        @include tablet {
+
+            align-items: center;
+            width: 12%;
+            padding-top: 1.5rem;
+            margin: 0 1.5rem;
+
+
+        }
+
+    }
+
+    &__link-view {
+        border-bottom: solid 0.25rem white;
+        color: $second-color;
+
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 1rem auto;
+        height: 1.20rem;
+
+        @include tablet {
+            width: auto;
+            margin: 0;
+            padding-top: 2rem;
+            padding-right: 2rem;
+            padding-left: 1rem;
+
+
+        }
+
+
+    }
+}
+
+.hero {
+    @include tablet {
+        height: 25rem;
+    }
+
+    @include desktop {
+        padding: 0 9rem;
+        height: 33.5rem;
+    }
+
+    display: flex;
+    background-image: url("../assets/Images/hero.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 1rem;
+    height: 11.5rem;
+    position: relative;
+
+    &__opacity {
+        background-color: $third-color;
+        opacity: .2;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+    }
+
+
+    &__title {
+        color: $text-color;
+        display: flex;
+        align-items: center;
+        line-height: 2rem;
+        font-size: 1.45rem;
+        font-weight: 700;
+        width: 70%;
+        font-family: "Avenir-Bold";
+
+        @include tablet {
+
+            line-height: 4.25rem;
+            font-size: 3.75rem;
+            padding-left: 1rem;
+
+
+        }
+    }
+}
+
+.about {
+    @include display-mobile;
+
+    padding-bottom: 2.5rem;
+
+    @include desktop {
+        padding: 0 10rem;
+        margin-bottom: 2.4rem;
+
+        &__container {
+            padding: 0 6.1rem;
+        }
+
+
+        // &__image {
+        //     width: 56rem;
+        //     height: 28.125rem;
+        //     margin: 0 auto;
+        // }
+    }
+
+    &__header {
+        @include header-mobile;
+
+        @include tablet {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            padding-left: 1.75rem;
+        }
+
+        @include desktop {
+            &__header {
+                margin: 2.4rem 0;
+
+            }
+        }
+    }
+
+    &__musicians {
+        @include photo-mobile;
+        
+        margin: 0 auto;
+
+        @include tablet {
+            width: 90%;
+            height: 22.625rem;
+        }
+
+        @include desktop {
+            width: 51.5rem;
+            height: 28.125
+
+        }
+
+
+    }
+
+    &__subheader {
+        width: 91%;
+        margin: auto;
+        padding: 1.5rem 0 0;
+        font-size: 1rem;
+        line-height: 1.35rem;
+        font-family: "Avenir-Bold";
+
+        @include tablet {
+
+            margin: 0;
+            padding: 2rem 2rem 0;
+            font-size: 1.5rem;
+            line-height: 2rem;
+
+        }
+
+        @include desktop {
+            margin: 2.5rem 0 1.6rem 0;
+        }
+    }
+
+    &__signature {
+        font-family: "Avenir";
+        font-size: .8rem;
+        padding: .6rem 1rem 0;
+
+        @include tablet {
+            font-weight: 100;
+            font-size: 1rem;
+            padding: .6rem 2rem 0;
+        }
+    }
+
+    @include tablet {
+        &__paragraph-column {
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            width: 95%;
+
+        }
+    }
+
+    &__paragraph-title {
+        font-family: "Avenir-Bold";
+        font-size: 1rem;
+        padding: 0 1.2rem;
+        margin-bottom: 0;
+
+        @include tablet {
+
+            font-size: 1.5rem;
+            padding: 0 2rem;
+        }
+    }
+
+    &__paragraph-main {
+        margin: 0 auto;
+        font-size: 0.75rem;
+        padding: 1rem 1rem 0 1rem;
+        line-height: 1.15rem;
+        width: 88%;
+
+        @include tablet {
+            margin: 0 auto;
+            font-size: 0.875rem;
+            padding-left: 2rem;
+            line-height: 1.375rem;
+            width: 80%;
+        }
+
+        @include desktop {
+            margin-right: 1.25rem;
+        }
+
+        &__two {
+            padding-top: .5rem;
+            padding-bottom: 1.55rem;
+
+            @include tablet {
+                margin-left: 0;
+
+            }
+        }
+    }
+}
+
+.photo {
+    @include display-mobile;
+    background-color: $second-color;
+    padding-bottom: 2.5rem;
+
+    
+        &__container {
+            margin-right: 0;
+            padding-left: 1rem;
+            
+            
+            @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 2rem;               
+            margin: auto; 
+            }           
+
+            @include desktop {
+                padding: 0 11.25rem;
+                margin: 0 auto;
+            }
+        }
+    
+
+    @include desktop {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    &__header {
+        @include header-mobile;
+        margin-bottom: 0;
+        margin-top: .1rem;
+        padding-bottom: .5rem;
+        padding-top: 1.5rem;
+
+        @include tablet {
+            margin-left: 0;
+            padding-left: 2rem;
+        }
+
+        @include desktop {
+            padding-left: 12.2rem;
+        }
+
+    }
+
+    &__image {
+        width: 95%;
+        margin: 0 auto; 
+        
+        padding: .5rem 0 0 0;
+
+        @include tablet {
+            width: 30%;
+            height: 28%;
+            margin-left: 0;
+            
+        }
+
+        @include desktop {
+            margin-left: 1rem;
+            
+        }
+
+    }
+
+}
+
+.comments {
+    @include display-mobile;
+    
+
+    &__header {
+        @include header-mobile;
+        padding-left: 1rem;
+        margin-top: 1rem;
+        
+
+        @include tablet {
+            font-size: 1.5rem;
+            padding-left: 2rem;
+        }
+
+        @include desktop {
+            padding-left: 12.2rem;
+        }
+    }
+
+    &__container {
+        display: flex;
+        padding-bottom: 1rem;
+        border-bottom: solid $third-color 2px;
+        margin: 0 1rem;
+        width: 18rem;
+
+        @include tablet {
+            width: 36rem;
+            margin: 0 6rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;          
+           margin-left: auto;
+           margin-right: auto;
+            
+
+        }
+
+        @include desktop {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+
+
+    &__section {
+        display: flex;
+        flex-direction: row;
+        padding-top: 1.0rem;
+        
+
+        @include tablet {
+            justify-items: flex-start;
+        }
+
+    }
+
+    &__posted-list {
+        padding: 0 1rem 1.5rem 1rem;
+        
+        @include tablet {
+            width: 36rem;
+            margin: 0 auto;
+            padding-bottom: 3rem;
+            position: relative;
+           
+
+        }
+    }
+
+    &__image {
+        height: 3rem;
+        width: 3rem;
+        margin: 1rem 1rem 0 0;
+        border-radius: 3rem;
+
+
+        @include tablet {
+            margin-left: 6rem;
+            position: absolute;
+        }
+
+        @include desktop {
+            margin-left: 0;
+        }
+    }
+
+    @include tablet {
+        &__name-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin: auto 0;
+        }
+    }
+
+    &__label-name {
+        font-size: .75rem;
+        line-height: 1.25rem;
+        color: $third-color;
+        font-weight: bold;
+        margin: 0 auto;
+
+        @include tablet {
+            margin-left: 10.5rem;
+
+        }
+
+        @include desktop {
+            margin-left: 6.9rem;
+        }
+    }
+
+
+    &__label-comment {
+        font-size: .75rem;
+        line-height: 1.25rem;
+        color: $third-color;
+        font-weight: bold;
+        margin-bottom: 0;
+
+        @include tablet {
+            margin-right: 21.5rem;
+            padding-top: 1rem;
+        }
+
+        @include desktop {
+            margin-right: 25.25rem;
+        }
+    }
+
+    &__label-style-name {
+        width: 13.3rem;
+        height: 2.5rem;
+        background-color: $second-color;
+        border-radius: .25rem;
+        border: #E1E1E1 solid 2px;
+
+        @include tablet {
+            width: 25rem;
+        }
+
+        @include desktop {
+            width: 28.75rem;
+        }
+    }
+
+
+    &__label-style-comments {
+        width: 13.3rem;
+        background-color: $second-color;
+        border-radius: .25rem;
+        padding-bottom: 6rem;
+        border: #E1E1E1 solid 2px;
+
+        &:focus {
+            border: black solid 2px;
+        }
+
+        @include tablet {
+            width: 25rem;
+            padding-bottom: 4rem;
+        }
+
+        @include desktop {
+            width: 28.75rem;
+        }
+
+
+    }
+
+
+
+    &__button {
+        margin-top: 1rem;
+        padding: .89rem 4.7rem;
+        border-radius: .25rem;
+        background-color: $main-color;
+        color: $second-color;
+        font-weight: 100;
+        font-family: "Avenir-Demi";
+        border-style: solid;
+        border: .3rem;
+        margin-bottom: 2rem;
+
+        @include tablet {
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+
+    }
+
+    &__delete-button {
+        padding: .89rem 1.7rem;
+        border-radius: .25rem;
+        background-color: $main-color;
+        color: $second-color;
+        font-weight: 100;
+        font-family: "Avenir-Demi";
+        border-style: solid;
+        border: .3rem;
+        // margin: 1rem 0 0 11rem;
+        position: relative;
+        left: 11rem;
+        margin-top: 1rem;
+
+        @include tablet {
+            position: relative;
+            left: 29rem;
+        }
+
+    }
+
+    &__circle {
+        background-color: $third-color;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        margin-right: 1rem;
+
+
+    }
+
+    &__name {
+        margin: 0 1rem 0 0;
+        padding-top: .5rem;
+        font-size: .8rem;
+
+        @include tablet {
+            margin: 0 1rem;
+            width: 8rem;
+        }   
+
+    }
+
+
+    &__date {
+        color: $third-color;
+        width: 5.5rem;
+        margin: .5rem auto;
+        margin-right: 0;
+        position: absolute;
+        left: 14rem;
+
+        @include tablet {
+
+            margin-right: 23rem;
+            font-size: .8rem;
+            width: 2rem;
+            left: 14rem;
+            
+        }
+
+    }
+
+
+    &__text-comment {
+        width: 14.1rem;
+        margin: 0 0 0 4rem;
+        font-size: .9rem;
+
+        @include tablet {
+            width: 32rem;
+        }
+    }
+
+    &__text-wrapper {
+        border-bottom: solid $third-color 2px;
+        padding-bottom: .8rem;
+        width: 18rem;
+
+        @include tablet {
+            width: 36rem;
+        }
+
+        
+
+    }
+}
+
+
+.footer {
+    @include display-mobile;
+    background-color: $main-color;
+
+    @include desktop {
+        padding: 0.775rem 11.25rem 2.4rem 11.25rem;
+    }
+
+    @include tablet {
+        
+
+        &__container {
+            display: inline-flex;
+            flex-direction: row;
+            width: 48rem;
+            
+
+            
+        }
+
+        &__container-deets {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 0;
+            padding-right: 3rem;
+            width: 90%;
+            
+            
+        }
+
+        &__container-words {
+            margin: auto 0;
+        }
+    }
+
+    @include desktop {
+
+        &__container {
+            width: 53rem; 
+        }
+       
+    }
+
+    &__header {
+        @include header-mobile;
+        color: $text-color;
+        font-size: 2rem;
+        margin: auto 0;
+        padding-top: 3rem;
+        font-family: "Avenir-Demi";
+        font-weight: bold;
+    }
+
+    &__icons-container {
+        display: flex;
+        padding: 1.44rem .5rem;
+        justify-content: space-around;
+        width: 8.25rem;
+
+        @include tablet {
+            flex-direction: row;
+            padding-left: 3rem;
+        }
+    }
+
+    &__icons {
+        height: 1.5rem;
+        width: 1.5rem;
+
+        @include tablet {
+            height: 3rem;
+            width: 3rem;
+            padding: 2.5rem 0 0 2rem;
+            height: 1rem;
+            width: 1rem;
+        }
+
+    
+    }
+
+    &__logo {
+        display: none;
+
+        @include tablet {
+            display: initial;
+            position: absolute;
+            right: 1rem;
+            padding-top: 2.5rem;
+            
+
+        }
+
+        @include desktop {
+            right: 11rem;
+            
+        }
+
+   
+    }
+
+    &__contact-name {
+        @include footertext-mobile;
+
+    }
+
+    &__contact-name-style {
+        margin-top: 0 auto;
+        
+        @include tablet {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    
+    }   
+        
+
+
+    &__contact-details {
+        @include footertext-mobile;
+        font-weight: 100;
+        font-size: .79rem;
+        margin: auto 0;
+
+        @include tablet {
+            font-size: .8rem;
+            font-weight: 500;
+        }
+    }
+
+
+    &__contact-copyright {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+
+        @include tablet {
+            display: none;
+        }
+
+    
+    }
+
+    &__contact-copyright-large {
+        display: none;
+
+        @include tablet {
+            display: initial;
+            padding: 1rem 0 2rem 1rem;
+        }
+    }
+}
