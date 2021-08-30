@@ -25,6 +25,12 @@ getShows();
     function displayShows(listArray) {
         
         listArray.forEach(listArray => {
+         
+         let arrayDate = new Date(parseInt(listArray.date));
+         let properDate = arrayDate
+             .getUTCMonth() + 1 + "/" +
+             arrayDate.getUTCDate() + "/" +
+             arrayDate.getUTCFullYear();  
 
         const dateContainer = document.createElement("div");
         showsContainer.appendChild(dateContainer);
@@ -37,7 +43,7 @@ getShows();
         
         const dateText = document.createElement("p");            
         dateContainer.appendChild(dateText);
-        dateText.innerText = listArray.date;
+        dateText.innerText = properDate;
         dateText.className = "shows__date-text";
 
         const venueContainer = document.createElement("div");
@@ -118,10 +124,16 @@ getShows();
             const infoContainer = document.createElement("div");
             sectionContainer.appendChild(infoContainer);
             infoContainer.className = "shows__info-container";
+             
+            let arrayDate = new Date(parseInt(listArray.date));
+            let properDate = arrayDate
+             .getUTCMonth() + 1 + "/" +
+             arrayDate.getUTCDate() + "/" +
+             arrayDate.getUTCFullYear();   
 
             const dateText = document.createElement("p");            
             infoContainer.appendChild(dateText);
-            dateText.innerText = listArray.date;
+            dateText.innerText = properDate;
             dateText.className = "shows__date-text";
 
             const venueText = document.createElement("p"); 
